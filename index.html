@@ -4,6 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chef Anisur Rahman Ariyan | Pastry & Bakery Chef Portfolio</title>
+  <meta name="description" content="Chef Anisur Rahman Ariyan (Ariyan Ahmed) — Pastry & Bakery Chef in Jeddah, Saudi Arabia. Viennoiserie, artisan breads, modern desserts, breakfast & oriental bakery. Restaurant & bakery consultation." />
+  <meta name="theme-color" content="#0f0d0c" />
+  <link rel="canonical" href="https://chefariyan.com/" />
+
+  <!-- Link preview for WhatsApp, LinkedIn, Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chefariyan.com/" />
+  <meta property="og:title" content="Chef Anisur Rahman Ariyan | Pastry & Bakery Chef" />
+  <meta property="og:description" content="Pastry & Bakery Chef in Jeddah, Saudi Arabia. Portfolio, certificates and restaurant & bakery consultation." />
+  <meta property="og:image" content="https://chefariyan.com/profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,15 +31,9 @@
       --border: rgba(255, 255, 255, 0.1);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -37,20 +43,13 @@
       overflow-x: hidden;
     }
 
-    h1, h2, h3, .brand {
-      font-family: 'Playfair Display', serif;
-    }
+    body.no-scroll { overflow: hidden; }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    h1, h2, h3, .brand { font-family: 'Playfair Display', serif; }
 
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 18px;
-    }
+    a { color: inherit; text-decoration: none; }
+
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 18px; }
 
     /* Navbar */
     header {
@@ -59,6 +58,7 @@
       z-index: 50;
       background: rgba(15, 13, 12, 0.94);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
 
@@ -66,9 +66,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 0;
+      padding: 14px 18px;
       gap: 12px;
-      flex-wrap: wrap;
     }
 
     .brand {
@@ -80,15 +79,28 @@
 
     .nav-links {
       display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      font-size: 0.88rem;
+      gap: 22px;
+      font-size: 0.9rem;
       color: var(--muted);
     }
 
-    .nav-links a:hover {
-      color: var(--accent);
+    .nav-links a { transition: color 0.2s ease; }
+    .nav-links a:hover { color: var(--accent); }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 10px;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
     }
+
+    .menu-toggle svg { width: 22px; height: 22px; }
 
     /* Hero */
     .hero {
@@ -114,8 +126,16 @@
     .hero h1 {
       font-size: clamp(1.9rem, 4.5vw, 3.1rem);
       line-height: 1.15;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
+
+    .hero .aka {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .hero .aka strong { color: var(--text); font-weight: 600; }
 
     .hero .subtitle {
       font-size: 1.02rem;
@@ -130,7 +150,6 @@
       margin-bottom: 20px;
     }
 
-    /* Works Photo Check Box */
     .works-check-box {
       background: var(--surface);
       border: 1px solid rgba(212, 155, 84, 0.35);
@@ -172,37 +191,21 @@
       border: 1px solid transparent;
       transition: 0.2s ease;
       min-height: 44px;
+      font-family: inherit;
     }
 
-    .btn-primary {
-      background: var(--accent);
-      color: #14100d;
-    }
+    .btn-primary { background: var(--accent); color: #14100d; }
+    .btn-primary:hover { background: var(--accent-hover); }
 
-    .btn-primary:hover {
-      background: var(--accent-hover);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border-color: var(--border);
-      color: var(--text);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
+    .btn-outline { background: transparent; border-color: var(--border); color: var(--text); }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
     .btn-whatsapp {
       background: rgba(37, 211, 102, 0.15);
       border-color: rgba(37, 211, 102, 0.45);
       color: #7ef2a8;
     }
-
-    .btn-whatsapp:hover {
-      background: rgba(37, 211, 102, 0.25);
-    }
+    .btn-whatsapp:hover { background: rgba(37, 211, 102, 0.25); }
 
     .hero-card {
       background: var(--surface);
@@ -221,20 +224,12 @@
       border: 1px solid var(--border);
     }
 
-    .meta-line {
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
+    .meta-line { font-size: 0.88rem; color: var(--muted); }
 
     /* Sections */
-    section {
-      padding: 44px 0;
-      border-top: 1px solid var(--border);
-    }
+    section { padding: 44px 0; border-top: 1px solid var(--border); }
 
-    .section-header {
-      margin-bottom: 24px;
-    }
+    .section-header { margin-bottom: 24px; }
 
     .section-header h2 {
       font-size: clamp(1.5rem, 3.5vw, 2.15rem);
@@ -242,18 +237,12 @@
       line-height: 1.25;
     }
 
-    .section-header p {
-      color: var(--muted);
-      max-width: 760px;
-      font-size: 0.95rem;
-    }
+    .section-header p { color: var(--muted); max-width: 760px; font-size: 0.95rem; }
 
-    /* Grid & Cards */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
+    .sub-header { margin: 34px 0 16px; }
+    .sub-header.first { margin-top: 0; }
+    .sub-header h3 { font-size: 1.35rem; margin-bottom: 4px; }
+    .sub-header p { color: var(--muted); font-size: 0.92rem; }
 
     .grid-3 {
       display: grid;
@@ -268,27 +257,14 @@
       padding: 20px;
     }
 
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-      color: var(--accent);
-    }
+    .card h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--accent); }
 
-    .card p, .card li {
-      color: var(--muted);
-      font-size: 0.93rem;
-    }
+    .card p, .card li { color: var(--muted); font-size: 0.93rem; }
 
-    .card ul {
-      padding-left: 18px;
-      margin-top: 8px;
-    }
+    .card ul { padding-left: 18px; margin-top: 8px; }
+    .card li { margin-bottom: 6px; }
 
-    .card li {
-      margin-bottom: 6px;
-    }
-
-    /* Experience Timeline */
+    /* Experience */
     .exp-item {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -307,31 +283,11 @@
       margin-bottom: 4px;
     }
 
-    .exp-role {
-      font-weight: 700;
-      font-size: 0.98rem;
-      color: var(--text);
-    }
+    .exp-role { font-weight: 700; font-size: 0.98rem; color: var(--text); }
+    .exp-date { font-size: 0.84rem; color: var(--accent); font-weight: 600; }
+    .exp-place { font-size: 0.88rem; color: var(--muted); margin-bottom: 6px; }
 
-    .exp-date {
-      font-size: 0.84rem;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .exp-place {
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-
-    /* Skills Pills */
-    .skills-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
-    }
+    .skills-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 
     .skill-pill {
       background: var(--surface-2);
@@ -342,40 +298,43 @@
       color: var(--text);
     }
 
-    /* Consultation */
-    .days-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 10px;
-      margin: 16px 0 20px;
+    /* Consultation packages */
+    .package-card { display: flex; flex-direction: column; gap: 12px; }
+
+    .package-card.featured { border-color: rgba(212, 155, 84, 0.55); }
+
+    .package-tag {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--accent);
+      background: rgba(212, 155, 84, 0.12);
+      border: 1px solid rgba(212, 155, 84, 0.3);
+      padding: 4px 10px;
+      border-radius: 999px;
     }
 
-    .day-btn {
-      padding: 12px 8px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--surface-2);
-      color: var(--text);
-      font-weight: 600;
-      cursor: pointer;
-      text-align: center;
+    .package-card h3 { margin-bottom: 0; }
+    .package-card ul { flex: 1; margin-top: 0; }
+    .package-card .btn { width: 100%; }
+
+    .package-note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px dashed rgba(212, 155, 84, 0.4);
+      border-radius: 12px;
+      color: var(--muted);
       font-size: 0.9rem;
-      min-height: 44px;
+      text-align: center;
     }
 
-    .day-btn.active, .day-btn:hover {
-      background: var(--accent);
-      color: #14100d;
-      border-color: var(--accent);
-    }
+    .package-note strong { color: var(--text); }
 
     /* Certificates */
-    .cert-card {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 14px;
-    }
+    .cert-card { display: flex; flex-direction: column; justify-content: space-between; gap: 14px; }
 
     .cert-tag {
       font-size: 0.78rem;
@@ -394,7 +353,7 @@
       padding: 18px;
     }
 
-    .pdf-frame-wrap {
+    .pdf-desktop {
       margin-top: 14px;
       border-radius: 12px;
       overflow: hidden;
@@ -402,17 +361,115 @@
       background: #120f0d;
     }
 
-    .pdf-frame-wrap iframe {
-      width: 100%;
-      height: 540px;
-      border: none;
-      display: block;
+    .pdf-desktop iframe { width: 100%; height: 560px; border: none; display: block; }
+
+    /* Mobile PDF viewer (page by page) */
+    .pdf-mobile { display: none; margin-top: 14px; }
+
+    .is-mobile .pdf-desktop { display: none; }
+    .is-mobile .pdf-mobile { display: block; }
+
+    .m-viewer {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #120f0d;
+      overflow: hidden;
     }
 
-    /* Contact Links */
+    .m-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 8px;
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .m-btn {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      min-width: 44px;
+      height: 40px;
+      padding: 0 12px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .m-btn:disabled { opacity: 0.35; cursor: default; }
+
+    .m-btn.full-btn { color: var(--accent); border-color: rgba(212, 155, 84, 0.4); }
+
+    .m-count { font-size: 0.86rem; color: var(--muted); white-space: nowrap; }
+    .m-count strong { color: var(--text); }
+
+    .m-stage {
+      position: relative;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #120f0d;
+      touch-action: pan-y pinch-zoom;
+    }
+
+    .m-stage canvas { display: block; max-width: 100%; }
+
+    .m-status {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: center;
+      padding: 20px;
+      background: rgba(18, 15, 13, 0.75);
+    }
+
+    .m-status[hidden] { display: none; }
+
+    .spinner {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 3px solid rgba(212, 155, 84, 0.25);
+      border-top-color: var(--accent);
+      animation: spin 0.9s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .m-hint { text-align: center; font-size: 0.78rem; color: var(--muted); padding: 8px; }
+
+    .m-viewer.is-full {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      border-radius: 0;
+      border: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .m-viewer.is-full .m-stage { flex: 1; min-height: 0; overflow: auto; }
+    .m-viewer.is-full .m-hint { display: none; }
+
+    /* Contact */
     .contact-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 12px;
     }
 
@@ -420,27 +477,41 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 16px;
-      display: block;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
       transition: 0.2s ease;
     }
 
-    .contact-item:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
+    .contact-item:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+    .c-icon {
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .contact-label {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
+    .c-icon svg { width: 22px; height: 22px; }
 
-    .contact-val {
-      font-weight: 600;
-      font-size: 0.94rem;
-      word-break: break-word;
-    }
+    .c-whatsapp { background: rgba(37, 211, 102, 0.15); color: #4ee08a; }
+    .c-phone { background: rgba(212, 155, 84, 0.15); color: var(--accent); }
+    .c-email { background: rgba(234, 67, 53, 0.15); color: #ff8a7f; }
+    .c-instagram { background: rgba(225, 48, 108, 0.16); color: #ff7bb0; }
+    .c-linkedin { background: rgba(10, 102, 194, 0.2); color: #6cb4ff; }
+
+    .c-text { flex: 1; min-width: 0; }
+
+    .contact-label { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 2px; }
+
+    .contact-val { display: block; font-weight: 600; font-size: 0.94rem; word-break: break-word; }
+
+    .c-arrow { color: var(--muted); font-size: 1.1rem; transition: 0.2s ease; }
+    .contact-item:hover .c-arrow { color: var(--accent); transform: translate(2px, -2px); }
 
     footer {
       text-align: center;
@@ -450,70 +521,69 @@
       font-size: 0.86rem;
     }
 
-    /* Tablet & Mobile Optimization */
+    /* Tablet & Mobile */
     @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 28px 0 24px;
+      .menu-toggle { display: inline-flex; }
+
+      .nav { flex-wrap: wrap; }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        font-size: 1rem;
+        padding: 6px 0 4px;
       }
-      .hero-card img {
-        max-height: 300px;
+
+      .nav-links.open { display: flex; }
+
+      .nav-links a {
+        padding: 12px 4px;
+        border-top: 1px solid var(--border);
+        color: var(--text);
       }
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-      .days-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
+
+      .hero { grid-template-columns: 1fr; gap: 24px; padding: 28px 0 24px; }
+      .hero-card img { max-height: 300px; }
+      .grid-3 { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 600px) {
-      .nav {
-        padding: 12px 0;
-      }
-      .nav-links {
-        gap: 10px 14px;
-        font-size: 0.82rem;
-      }
-      .btn-group {
-        flex-direction: column;
-      }
-      .btn-group .btn {
-        width: 100%;
-      }
-      .cert-card .btn-group {
-        flex-direction: row;
-      }
-      .cert-card .btn-group .btn {
-        flex: 1;
-        padding: 10px 12px;
-        font-size: 0.84rem;
-      }
-      .pdf-frame-wrap iframe {
-        height: 380px;
-      }
-      section {
-        padding: 36px 0;
-      }
+      .brand { font-size: 1.05rem; }
+      .btn-group { flex-direction: column; }
+      .btn-group .btn { width: 100%; }
+      .cert-card .btn-group { flex-direction: row; }
+      .cert-card .btn-group .btn { flex: 1; padding: 10px 12px; font-size: 0.84rem; }
+      section { padding: 36px 0; }
+      .m-btn .lbl { display: none; }
     }
   </style>
+  <script>
+    // Phones & tablets get the page-by-page PDF viewer (embedded PDFs don't work well there)
+    (function () {
+      var ua = navigator.userAgent || '';
+      var touchMac = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+      if (/iPhone|iPad|iPod|Android/i.test(ua) || touchMac || window.matchMedia('(max-width: 900px)').matches) {
+        document.documentElement.classList.add('is-mobile');
+      }
+    })();
+  </script>
 </head>
 <body>
 
   <header>
     <div class="container nav">
       <a href="#top" class="brand">Chef Anisur Rahman Ariyan</a>
-      <nav class="nav-links">
-        <a href="#about">Summary & Experience</a>
-        <a href="#signature">Signature Items</a>
-        <a href="#breakfast-catalog">Breakfast Works PDF</a>
-        <a href="#consultation">Consultation (2–7 Days)</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#signature">Signature</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#consultation">Consulting</a>
         <a href="#certificates">Certificates</a>
-        <a href="#portfolio-pdf">Pastry & Bakery Works PDF</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -525,30 +595,30 @@
       <div>
         <span class="badge">Pastry & Bakery Chef • Jeddah, Saudi Arabia</span>
         <h1>Chef Anisur Rahman Ariyan</h1>
+        <div class="aka">Also known as <strong>Chef Ariyan Ahmed</strong></div>
         <div class="subtitle">Viennoiserie, Artisan Breads, Silicone Mould, Modern Desserts & Oriental Bakery Breakfast</div>
         <p class="summary">
           Pastry & Bakery Chef with 10+ years of experience in pastry, bakery, viennoiserie, artisan breads, breakfast & oriental bakery items, desserts, and cake decoration. Currently working at Dessert Rebels Indigo Beach Resort, Jeddah, Saudi Arabia. Skilled in production management, recipe development, food safety, team supervision, and quality control.
         </p>
 
-        <!-- Works Photo Check Box with Heading Above Both PDF Options -->
         <div class="works-check-box">
-          <div class="works-check-title">Check My Works Photos (Two PDF Catalogs Below)</div>
-          <div class="works-check-sub">Both options below show my actual work photos—choose Pastry &amp; Bakery Works or Breakfast &amp; Bakery Works.</div>
+          <div class="works-check-title">Check My Work Photos (Two PDF Catalogs)</div>
+          <div class="works-check-sub">Both catalogs show my actual work — choose Pastry &amp; Bakery Works or Breakfast &amp; Bakery Works.</div>
           <div class="btn-group" style="margin-bottom: 0;">
-            <a href="#portfolio-pdf" class="btn btn-primary">Preview Pastry &amp; Bakery Works (42-Page PDF)</a>
-            <a href="#breakfast-catalog" class="btn btn-outline">Preview Breakfast &amp; Bakery Works PDF</a>
+            <a href="#portfolio-pdf" class="btn btn-primary">Pastry &amp; Bakery Works (42 Pages)</a>
+            <a href="#breakfast-catalog" class="btn btn-outline">Breakfast &amp; Bakery Works</a>
           </div>
         </div>
 
         <div class="btn-group" style="margin-bottom: 0;">
-          <a href="#consultation" class="btn btn-outline">Book 2–7 Day Consultation</a>
+          <a href="#consultation" class="btn btn-outline">Consultation Packages</a>
           <a href="https://wa.me/966580369396" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp Direct Chat</a>
         </div>
       </div>
 
       <div class="hero-card">
-        <img src="profile.jpg" alt="Chef Anisur Rahman Ariyan" />
-        <div class="meta-line"><strong>Anisur Rahman Ariyan</strong> • Pastry & Bakery Chef</div>
+        <img src="profile.jpg" alt="Chef Anisur Rahman Ariyan (Ariyan Ahmed)" />
+        <div class="meta-line"><strong>Anisur Rahman Ariyan</strong> (Ariyan Ahmed) • Pastry & Bakery Chef</div>
         <div class="meta-line">Jeddah, 21441, Saudi Arabia • +966580369396</div>
       </div>
     </div>
@@ -580,7 +650,7 @@
 
       <div class="exp-item">
         <div class="exp-top">
-          <span class="exp-role">Pastry Bakery CDP — Mia's Kitchen</span>
+          <span class="exp-role">Pastry & Bakery CDP — Mia's Kitchen</span>
           <span class="exp-date">Oct 2024 – Jun 2025</span>
         </div>
         <div class="exp-place">Riyadh, Saudi Arabia</div>
@@ -589,7 +659,7 @@
 
       <div class="exp-item">
         <div class="exp-top">
-          <span class="exp-role">Pastry Bakery DCDP — Bk Boutique</span>
+          <span class="exp-role">Pastry & Bakery DCDP — Bk Boutique</span>
           <span class="exp-date">Oct 2022 – Oct 2024</span>
         </div>
         <div class="exp-place">Riyadh, Saudi Arabia</div>
@@ -598,8 +668,8 @@
 
       <div class="exp-item">
         <div class="exp-top">
-          <span class="exp-role">Bakery Commis III — Anwar Al Madinah Movenpick Hotel</span>
-          <span class="exp-date">Saudi Arabia</span>
+          <span class="exp-role">Bakery Commis III — Anwar Al Madinah Mövenpick Hotel</span>
+          <span class="exp-date">Mar 2022 – Sep 2022</span>
         </div>
         <div class="exp-place">Madinah, Saudi Arabia</div>
         <p class="meta-line">Supported dough preparation, mise en place, daily bakery & breakfast production, workstation organization, and food safety standards.</p>
@@ -607,7 +677,7 @@
 
       <div class="exp-item">
         <div class="exp-top">
-          <span class="exp-role">Pastry Bakery Commis — Oro Bakery</span>
+          <span class="exp-role">Pastry & Bakery Commis — Oro Bakery</span>
           <span class="exp-date">May 2018 – Jan 2022</span>
         </div>
         <div class="exp-place">Dhaka, Bangladesh</div>
@@ -678,11 +748,36 @@
       </div>
     </section>
 
-    <!-- Breakfast & Bakery Works PDF -->
-    <section id="breakfast-catalog">
+    <!-- Portfolio: both PDF catalogs -->
+    <section id="portfolio">
       <div class="section-header">
-        <h2>Breakfast &amp; Bakery Works Photo Catalog PDF</h2>
-        <p>Preview or download your uploaded <strong>Breakfast &amp; Bakery Gallery Catalog — Chef Anisur Rahman Ariyan.pdf</strong> featuring breakfast &amp; bakery work photos.</p>
+        <h2>Work Photo Portfolio</h2>
+        <p>Two photo catalogs of my actual work. On a phone, swipe or use the arrows to change pages, and tap Full Screen for a bigger view.</p>
+      </div>
+
+      <!-- Pastry & Bakery Works PDF -->
+      <div id="portfolio-pdf" class="sub-header first">
+        <h3>Pastry &amp; Bakery Works (42 Pages)</h3>
+        <p>Preview my pastry &amp; bakery work photos below, or download the full PDF (~23.6 MB).</p>
+      </div>
+
+      <div class="pdf-box">
+        <div class="btn-group" style="margin-bottom: 0;">
+          <a href="My_Work_Photo_Portfolio_1-42_25MB.pdf" target="_blank" rel="noopener" class="btn btn-primary">Open Pastry &amp; Bakery Works PDF</a>
+          <a href="My_Work_Photo_Portfolio_1-42_25MB.pdf" download class="btn btn-outline">Download Full PDF (42 Pages)</a>
+        </div>
+
+        <div class="pdf-desktop">
+          <iframe data-src="My_Work_Photo_Portfolio_1-42_25MB.pdf" title="Pastry and Bakery Works Photo Portfolio PDF" loading="lazy"></iframe>
+        </div>
+
+        <div class="pdf-mobile" data-pdf="My_Work_Photo_Portfolio_1-42_25MB.pdf"></div>
+      </div>
+
+      <!-- Breakfast & Bakery Works PDF -->
+      <div id="breakfast-catalog" class="sub-header">
+        <h3>Breakfast &amp; Bakery Works</h3>
+        <p>Preview or download my Breakfast &amp; Bakery Gallery Catalog featuring breakfast &amp; bakery work photos.</p>
       </div>
 
       <div class="pdf-box">
@@ -691,39 +786,73 @@
           <a href="Breakfast%20%26%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf" download class="btn btn-outline">Download Breakfast Catalog PDF</a>
         </div>
 
-        <div class="pdf-frame-wrap">
-          <iframe src="Breakfast%20%26%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf" title="Breakfast and Bakery Works Photo Catalog PDF"></iframe>
+        <div class="pdf-desktop">
+          <iframe data-src="Breakfast%20%26%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf" title="Breakfast and Bakery Works Photo Catalog PDF" loading="lazy"></iframe>
         </div>
+
+        <div class="pdf-mobile" data-pdf="Breakfast%20%26%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf"></div>
       </div>
     </section>
 
-    <!-- Restaurant & Bakery Consultation System -->
+    <!-- Consultation Packages -->
     <section id="consultation">
       <div class="section-header">
-        <h2>Restaurant & Bakery Consultation (2 to 7 Days)</h2>
-        <p>Short-term hands-on consultation for restaurants, cafes, and bakeries to launch new items, develop recipes, set up production workflows, and train kitchen staff.</p>
+        <h2>Restaurant & Bakery Consultation</h2>
+        <p>Hands-on consultation for restaurants, hotels, cafes, and bakeries — from new recipes and team training to setting up a complete pastry &amp; bakery operation from scratch.</p>
       </div>
 
-      <div class="card">
-        <h3>Select Consultation Duration</h3>
-        <p>Choose a 2, 3, 4, 5, 6, or 7-day consultation plan tailored to creating new signature items and training your team.</p>
-
-        <div class="days-grid" id="daysGrid">
-          <button type="button" class="day-btn" data-days="2">2 Days</button>
-          <button type="button" class="day-btn active" data-days="3">3 Days</button>
-          <button type="button" class="day-btn" data-days="4">4 Days</button>
-          <button type="button" class="day-btn" data-days="5">5 Days</button>
-          <button type="button" class="day-btn" data-days="6">6 Days</button>
-          <button type="button" class="day-btn" data-days="7">7 Days</button>
+      <div class="grid-3">
+        <div class="card package-card">
+          <span class="package-tag">2 – 7 Days • On-site</span>
+          <h3>Recipe & Team Training</h3>
+          <p>I come to your kitchen, introduce new items and train your team until they can produce them on their own.</p>
+          <ul>
+            <li>New signature items &amp; recipe handover</li>
+            <li>Hands-on training for your pastry &amp; bakery team</li>
+            <li>Recipe cards with exact weights &amp; methods</li>
+            <li>Production workflow &amp; consistency checks</li>
+          </ul>
+          <a class="btn btn-whatsapp" target="_blank" rel="noopener"
+             href="https://wa.me/966580369396?text=Hello%20Chef%20Ariyan%2C%20I%20would%20like%20to%20inquire%20about%20the%20Recipe%20%26%20Team%20Training%20consultation%20(2-7%20days).">
+            Inquire on WhatsApp
+          </a>
         </div>
 
-        <p id="consultationSummary" style="margin-bottom: 16px; color: var(--text);">
-          Selected: <strong>3-Day Consultation</strong> — Ideal for introducing new menu/signature items, testing recipes, and hands-on team demo.
-        </p>
+        <div class="card package-card featured">
+          <span class="package-tag">Flexible Duration</span>
+          <h3>Menu Development</h3>
+          <p>A new or refreshed bakery, pastry, dessert or breakfast menu built around your concept and customers.</p>
+          <ul>
+            <li>Complete menu concept &amp; item selection</li>
+            <li>Recipe testing &amp; tasting sessions</li>
+            <li>Food cost &amp; portion guidance</li>
+            <li>Seasonal &amp; signature item ideas</li>
+          </ul>
+          <a class="btn btn-whatsapp" target="_blank" rel="noopener"
+             href="https://wa.me/966580369396?text=Hello%20Chef%20Ariyan%2C%20I%20would%20like%20to%20inquire%20about%20the%20Menu%20Development%20consultation.">
+            Inquire on WhatsApp
+          </a>
+        </div>
 
-        <a id="consultationWaBtn" href="https://wa.me/966580369396?text=Hello%20Chef%20Ariyan%2C%20I%20would%20like%20to%20inquire%20about%20a%203-Day%20restaurant/bakery%20consultation%20for%20new%20items%20and%20menu%20development." target="_blank" rel="noopener" class="btn btn-whatsapp">
-          Inquire on WhatsApp for Selected Days
-        </a>
+        <div class="card package-card">
+          <span class="package-tag">Project Based</span>
+          <h3>Full Setup / Pre-Opening</h3>
+          <p>Starting a new restaurant, cafe or bakery? I help set up the pastry &amp; bakery side from the very beginning.</p>
+          <ul>
+            <li>Kitchen layout &amp; production workflow planning</li>
+            <li>Equipment &amp; smallwares list</li>
+            <li>Full menu with standard recipes</li>
+            <li>Staff training &amp; opening support</li>
+          </ul>
+          <a class="btn btn-whatsapp" target="_blank" rel="noopener"
+             href="https://wa.me/966580369396?text=Hello%20Chef%20Ariyan%2C%20I%20would%20like%20to%20inquire%20about%20a%20Full%20Setup%20%2F%20Pre-Opening%20consultation.">
+            Inquire on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="package-note">
+        Available for clients across the <strong>Middle East, Europe and beyond</strong>. Pricing is shared on request, based on scope and duration.
       </div>
     </section>
 
@@ -776,25 +905,6 @@
       </div>
     </section>
 
-    <!-- Pastry & Bakery Works PDF Preview & Download -->
-    <section id="portfolio-pdf">
-      <div class="section-header">
-        <h2>Pastry &amp; Bakery Works Photo Portfolio PDF (42 Pages)</h2>
-        <p>Preview pastry &amp; bakery work photos directly below or download <strong>My_Work_Photo_Portfolio_1-42_25MB.pdf</strong> (~23.6 MB).</p>
-      </div>
-
-      <div class="pdf-box">
-        <div class="btn-group" style="margin-bottom: 0;">
-          <a href="My_Work_Photo_Portfolio_1-42_25MB.pdf" target="_blank" rel="noopener" class="btn btn-primary">Open Pastry &amp; Bakery Works PDF</a>
-          <a href="My_Work_Photo_Portfolio_1-42_25MB.pdf" download class="btn btn-outline">Download Full PDF (42 Pages)</a>
-        </div>
-
-        <div class="pdf-frame-wrap">
-          <iframe src="My_Work_Photo_Portfolio_1-42_25MB.pdf" title="Pastry and Bakery Works Photo Portfolio PDF"></iframe>
-        </div>
-      </div>
-    </section>
-
     <!-- Contact & Social Links -->
     <section id="contact">
       <div class="section-header">
@@ -804,28 +914,58 @@
 
       <div class="contact-list">
         <a href="https://wa.me/966580369396" target="_blank" rel="noopener" class="contact-item">
-          <div class="contact-label">WhatsApp Direct Chat</div>
-          <div class="contact-val">+966580369396</div>
+          <span class="c-icon c-whatsapp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </span>
+          <span class="c-text">
+            <span class="contact-label">WhatsApp Direct Chat</span>
+            <span class="contact-val">+966 58 036 9396</span>
+          </span>
+          <span class="c-arrow">↗</span>
         </a>
 
         <a href="tel:+966580369396" class="contact-item">
-          <div class="contact-label">Phone</div>
-          <div class="contact-val">+966580369396</div>
+          <span class="c-icon c-phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span class="c-text">
+            <span class="contact-label">Phone</span>
+            <span class="contact-val">+966 58 036 9396</span>
+          </span>
+          <span class="c-arrow">↗</span>
         </a>
 
         <a href="mailto:anisurahmed1999@gmail.com" class="contact-item">
-          <div class="contact-label">Email</div>
-          <div class="contact-val">anisurahmed1999@gmail.com</div>
+          <span class="c-icon c-email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span class="c-text">
+            <span class="contact-label">Email</span>
+            <span class="contact-val">anisurahmed1999@gmail.com</span>
+          </span>
+          <span class="c-arrow">↗</span>
         </a>
 
-        <a href="https://www.instagram.com/anisur_rahman_ariyan.02?jplx=eWZkdWtic3UwemQ5&utm_source=qr" target="_blank" rel="noopener" class="contact-item">
-          <div class="contact-label">Instagram</div>
-          <div class="contact-val">@anisur_rahman_ariyan.02</div>
+        <a href="https://www.instagram.com/anisur_rahman_ariyan.02" target="_blank" rel="noopener" class="contact-item">
+          <span class="c-icon c-instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </span>
+          <span class="c-text">
+            <span class="contact-label">Instagram</span>
+            <span class="contact-val">@anisur_rahman_ariyan.02</span>
+          </span>
+          <span class="c-arrow">↗</span>
         </a>
 
-        <a href="https://www.linkedin.com/in/anisur-rahman-ariyan-43a2b9346?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener" class="contact-item">
-          <div class="contact-label">LinkedIn</div>
-          <div class="contact-val">Anisur Rahman Ariyan</div>
+        <a href="https://www.linkedin.com/in/anisur-rahman-ariyan-43a2b9346" target="_blank" rel="noopener" class="contact-item">
+          <span class="c-icon c-linkedin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </span>
+          <span class="c-text">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-val">Anisur Rahman Ariyan</span>
+          </span>
+          <span class="c-arrow">↗</span>
         </a>
       </div>
     </section>
@@ -833,29 +973,216 @@
 
   <footer>
     <div class="container">
-      © 2026 Chef Anisur Rahman Ariyan • Pastry & Bakery Chef Portfolio • Jeddah, Saudi Arabia
+      © 2026 Chef Anisur Rahman Ariyan (Ariyan Ahmed) • Pastry & Bakery Chef Portfolio • Jeddah, Saudi Arabia
     </div>
   </footer>
 
   <script>
-    const dayButtons = document.querySelectorAll('.day-btn');
-    const summaryEl = document.getElementById('consultationSummary');
-    const waBtn = document.getElementById('consultationWaBtn');
-
-    dayButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        dayButtons.forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const days = btn.getAttribute('data-days');
-        summaryEl.innerHTML = `Selected: <strong>${days}-Day Consultation</strong> — Tailored menu/item creation, recipe development, and hands-on team training.`;
-
-        const msg = encodeURIComponent(
-          `Hello Chef Anisur Rahman Ariyan, I would like to book a ${days}-Day restaurant/bakery consultation for new items, recipe development, and menu setup.`
-        );
-        waBtn.href = `https://wa.me/966580369396?text=${msg}`;
+    /* ---------- Mobile menu ---------- */
+    (function () {
+      var toggle = document.getElementById('menuToggle');
+      var links = document.getElementById('navLinks');
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
-    });
+      links.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          links.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+
+    /* ---------- PDF viewers ---------- */
+    (function () {
+      var isMobile = document.documentElement.classList.contains('is-mobile');
+
+      // Desktop: embedded PDF (loaded only on desktop to save mobile data)
+      if (!isMobile) {
+        document.querySelectorAll('.pdf-desktop iframe[data-src]').forEach(function (f) {
+          f.src = f.getAttribute('data-src');
+        });
+        return;
+      }
+
+      // Mobile: page-by-page viewer using PDF.js
+      var PDFJS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+      var WORKER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      var libPromise = null;
+
+      function loadLib() {
+        if (libPromise) return libPromise;
+        libPromise = new Promise(function (resolve, reject) {
+          if (window.pdfjsLib) return resolve(window.pdfjsLib);
+          var s = document.createElement('script');
+          s.src = PDFJS_URL;
+          s.onload = function () {
+            if (!window.pdfjsLib) return reject(new Error('PDF.js missing'));
+            window.pdfjsLib.GlobalWorkerOptions.workerSrc = WORKER_URL;
+            resolve(window.pdfjsLib);
+          };
+          s.onerror = reject;
+          document.head.appendChild(s);
+        });
+        return libPromise;
+      }
+
+      function buildViewer(host) {
+        var url = host.getAttribute('data-pdf');
+        host.innerHTML =
+          '<div class="m-viewer">' +
+            '<div class="m-bar">' +
+              '<button type="button" class="m-btn prev" aria-label="Previous page" disabled>&#9664; <span class="lbl">Prev</span></button>' +
+              '<span class="m-count">Page <strong class="cur">1</strong> / <span class="tot">–</span></span>' +
+              '<button type="button" class="m-btn next" aria-label="Next page" disabled><span class="lbl">Next</span> &#9654;</button>' +
+              '<button type="button" class="m-btn full-btn" aria-label="Full screen"></button>' +
+            '</div>' +
+            '<div class="m-stage">' +
+              '<canvas></canvas>' +
+              '<div class="m-status"><div class="spinner"></div><div class="msg">Loading photos…</div></div>' +
+            '</div>' +
+            '<div class="m-hint">Swipe left / right to change page</div>' +
+          '</div>';
+
+        var viewer = host.querySelector('.m-viewer');
+        var stage = host.querySelector('.m-stage');
+        var canvas = host.querySelector('canvas');
+        var ctx = canvas.getContext('2d');
+        var statusEl = host.querySelector('.m-status');
+        var spinEl = host.querySelector('.spinner');
+        var msgEl = host.querySelector('.msg');
+        var curEl = host.querySelector('.cur');
+        var totEl = host.querySelector('.tot');
+        var prevBtn = host.querySelector('.prev');
+        var nextBtn = host.querySelector('.next');
+        var fullBtn = host.querySelector('.full-btn');
+
+        var doc = null, pageNum = 1, rendering = false, pending = null;
+
+        function setFullLabel(on) {
+          fullBtn.innerHTML = on ? '&#10005; <span class="lbl">Close</span>' : '&#x26F6; <span class="lbl">Full Screen</span>';
+          fullBtn.setAttribute('aria-label', on ? 'Close full screen' : 'Full screen');
+        }
+        setFullLabel(false);
+
+        function showStatus(text, spin) {
+          statusEl.hidden = false;
+          msgEl.textContent = text;
+          spinEl.style.display = spin ? '' : 'none';
+        }
+
+        function updateButtons() {
+          curEl.textContent = pageNum;
+          prevBtn.disabled = !doc || pageNum <= 1;
+          nextBtn.disabled = !doc || pageNum >= doc.numPages;
+        }
+
+        function render(num) {
+          if (!doc) return;
+          if (rendering) { pending = num; return; }
+          rendering = true;
+          pageNum = num;
+          updateButtons();
+          showStatus('Loading page ' + num + '…', true);
+
+          doc.getPage(num).then(function (page) {
+            var base = page.getViewport({ scale: 1 });
+            var full = viewer.classList.contains('is-full');
+            var availW = stage.clientWidth || host.clientWidth || 320;
+            var scale = availW / base.width;
+            if (full) {
+              var availH = stage.clientHeight || (window.innerHeight - 60);
+              scale = Math.min(scale, availH / base.height);
+            }
+            var dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+            var vp = page.getViewport({ scale: scale * dpr });
+            canvas.width = Math.floor(vp.width);
+            canvas.height = Math.floor(vp.height);
+            canvas.style.width = Math.floor(vp.width / dpr) + 'px';
+            canvas.style.height = Math.floor(vp.height / dpr) + 'px';
+            return page.render({ canvasContext: ctx, viewport: vp }).promise;
+          }).then(function () {
+            statusEl.hidden = true;
+          }).catch(function () {
+            showStatus('This page could not be shown. Please use “Open” or “Download” above.', false);
+          }).then(function () {
+            rendering = false;
+            if (pending !== null) { var p = pending; pending = null; render(p); }
+          });
+        }
+
+        function go(delta) {
+          if (!doc) return;
+          var n = pageNum + delta;
+          if (n < 1 || n > doc.numPages) return;
+          render(n);
+        }
+
+        prevBtn.addEventListener('click', function () { go(-1); });
+        nextBtn.addEventListener('click', function () { go(1); });
+
+        // Swipe left / right
+        var sx = null, sy = null;
+        stage.addEventListener('touchstart', function (e) {
+          if (e.touches.length !== 1) { sx = null; return; }
+          sx = e.touches[0].clientX; sy = e.touches[0].clientY;
+        }, { passive: true });
+        stage.addEventListener('touchend', function (e) {
+          if (sx === null) return;
+          var dx = e.changedTouches[0].clientX - sx;
+          var dy = e.changedTouches[0].clientY - sy;
+          if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) go(dx < 0 ? 1 : -1);
+          sx = null;
+        }, { passive: true });
+
+        // Full screen (works on iPhone too)
+        function setFull(on) {
+          viewer.classList.toggle('is-full', on);
+          document.body.classList.toggle('no-scroll', on);
+          setFullLabel(on);
+          if (doc) render(pageNum);
+        }
+        fullBtn.addEventListener('click', function () { setFull(!viewer.classList.contains('is-full')); });
+        document.addEventListener('keydown', function (e) {
+          if (!viewer.classList.contains('is-full')) return;
+          if (e.key === 'Escape') setFull(false);
+          if (e.key === 'ArrowRight') go(1);
+          if (e.key === 'ArrowLeft') go(-1);
+        });
+
+        // Re-fit after rotating the phone
+        var rt = null;
+        window.addEventListener('resize', function () {
+          clearTimeout(rt);
+          rt = setTimeout(function () { if (doc) render(pageNum); }, 250);
+        });
+
+        // Load PDF (streams pages instead of downloading the whole file first)
+        loadLib().then(function (pdfjsLib) {
+          return pdfjsLib.getDocument({ url: url, disableAutoFetch: true, disableStream: false }).promise;
+        }).then(function (d) {
+          doc = d;
+          totEl.textContent = d.numPages;
+          render(1);
+        }).catch(function () {
+          showStatus('Preview is not available right now. Please use “Open” or “Download” above.', false);
+        });
+      }
+
+      // Start loading a catalog only when the visitor scrolls near it
+      var hosts = document.querySelectorAll('.pdf-mobile[data-pdf]');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { io.unobserve(en.target); buildViewer(en.target); }
+          });
+        }, { rootMargin: '400px 0px' });
+        hosts.forEach(function (h) { io.observe(h); });
+      } else {
+        hosts.forEach(buildViewer);
+      }
+    })();
   </script>
 </body>
 </html>
