@@ -126,14 +126,36 @@
     .hero p.summary {
       color: var(--muted);
       font-size: 0.98rem;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
+    }
+
+    /* Works Photo Check Box */
+    .works-check-box {
+      background: var(--surface);
+      border: 1px solid rgba(212, 155, 84, 0.35);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+    }
+
+    .works-check-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .works-check-sub {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 14px;
     }
 
     .btn-group {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .btn {
@@ -141,10 +163,10 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 12px 20px;
+      padding: 12px 18px;
       border-radius: 10px;
       font-weight: 600;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       cursor: pointer;
       border: 1px solid transparent;
       transition: 0.2s ease;
@@ -465,9 +487,18 @@
         <p class="summary">
           Pastry & Bakery Chef with 10+ years of experience in pastry, bakery, viennoiserie, artisan breads, breakfast & oriental bakery items, desserts, and cake decoration. Currently working at Dessert Rebels Indigo Beach Resort, Jeddah, Saudi Arabia. Skilled in production management, recipe development, food safety, team supervision, and quality control.
         </p>
-        <div class="btn-group">
-          <a href="#portfolio-pdf" class="btn btn-primary">Preview Pastry & Bakery Works (42-Page PDF)</a>
-          <a href="#breakfast-catalog" class="btn btn-outline">Preview Breakfast & Bakery Works PDF</a>
+
+        <!-- Works Photo Check Box with Heading Above Both PDF Options -->
+        <div class="works-check-box">
+          <div class="works-check-title">Check My Works Photos (Two PDF Catalogs Below)</div>
+          <div class="works-check-sub">Both options below show my actual work photos—choose Pastry &amp; Bakery Works or Breakfast &amp; Bakery Works.</div>
+          <div class="btn-group" style="margin-bottom: 0;">
+            <a href="#portfolio-pdf" class="btn btn-primary">Preview Pastry &amp; Bakery Works (42-Page PDF)</a>
+            <a href="#breakfast-catalog" class="btn btn-outline">Preview Breakfast &amp; Bakery Works PDF</a>
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-bottom: 0;">
           <a href="#consultation" class="btn btn-outline">Book 2–7 Day Consultation</a>
           <a href="https://wa.me/966580369396" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp Direct Chat</a>
         </div>
@@ -609,7 +640,7 @@
     <section id="breakfast-catalog">
       <div class="section-header">
         <h2>Breakfast &amp; Bakery Works Photo Catalog PDF</h2>
-        <p>Preview or download your uploaded <strong>Breakfast &amp; Bakery Gallery Catalog — Chef Anisur Rahman Ariyan.pdf</strong> featuring breakfast &amp; bakery work photos.</p>
+        <p>Preview or download your uploaded <strong>Breakfast &amp; Bakery Gallery Catalog — Chef Anisur Rahman Ariyan.pdf</strong> featuring breakfast &amp; bakery work photos[cite: 184].</p>
       </div>
 
       <div class="pdf-box">
