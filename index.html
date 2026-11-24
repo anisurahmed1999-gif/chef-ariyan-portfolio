@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chef Anisur Rahman Ariyan | Pastry & Bakery Chef Portfolio</title>
-  <meta name="description" content="Chef Anisur Rahman Ariyan (Ariyan Ahmed) — Pastry & Bakery Chef in Jeddah, Saudi Arabia. Viennoiserie, artisan breads, modern desserts, breakfast & oriental bakery. Restaurant & bakery consultation." />
+  <meta name="description" content="Chef Anisur Rahman Ariyan (Ariyan Ahmed) — Head Chef, Pastry & Bakery, in Jeddah, Saudi Arabia. Viennoiserie, artisan breads, modern desserts, breakfast & oriental bakery. Restaurant & bakery consultation." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f0d0c'/%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23d49b54' stroke-width='2.5'/%3E%3Cellipse cx='16' cy='24' rx='3' ry='5' transform='rotate%28-50 16 24%29' fill='%23d49b54' stroke='%230f0d0c' stroke-width='1'/%3E%3Cellipse cx='48' cy='24' rx='3' ry='5' transform='rotate%2850 48 24%29' fill='%23d49b54' stroke='%230f0d0c' stroke-width='1'/%3E%3Cellipse cx='23' cy='19' rx='4.5' ry='6.5' transform='rotate%28-28 23 19%29' fill='%23d49b54' stroke='%230f0d0c' stroke-width='1'/%3E%3Cellipse cx='41' cy='19' rx='4.5' ry='6.5' transform='rotate%2828 41 19%29' fill='%23d49b54' stroke='%230f0d0c' stroke-width='1'/%3E%3Cellipse cx='32' cy='17' rx='6' ry='7.5' fill='%23d49b54' stroke='%230f0d0c' stroke-width='1'/%3E%3Ctext x='32' y='49' text-anchor='middle' font-family='Georgia,serif' font-size='19' font-weight='700' fill='%23d49b54'%3EAR%3C/text%3E%3C/svg%3E" />
   <meta name="theme-color" content="#0f0d0c" />
   <link rel="canonical" href="https://chefariyan.com/" />
 
@@ -12,7 +13,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://chefariyan.com/" />
   <meta property="og:title" content="Chef Anisur Rahman Ariyan | Pastry & Bakery Chef" />
-  <meta property="og:description" content="Pastry & Bakery Chef in Jeddah, Saudi Arabia. Portfolio, certificates and restaurant & bakery consultation." />
+  <meta property="og:description" content="Head Chef, Pastry & Bakery, in Jeddah, Saudi Arabia. Portfolio, certificates and restaurant & bakery consultation." />
   <meta property="og:image" content="https://chefariyan.com/profile.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -76,6 +77,46 @@
       color: var(--accent);
       letter-spacing: 0.3px;
     }
+
+    .brand { display: inline-flex; align-items: center; gap: 10px; }
+    .brand-logo { width: 36px; height: 36px; flex: 0 0 36px; }
+
+    /* About Me */
+    .about-story {
+      font-size: 1.02rem;
+      color: var(--text);
+      max-width: 820px;
+      margin-bottom: 22px;
+      padding-left: 16px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .fact {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    .fact-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .fact-val { font-weight: 600; font-size: 0.95rem; }
+
+    .fact.highlight { border-color: rgba(37, 211, 102, 0.45); }
+    .fact.highlight .fact-val { color: #7ef2a8; }
 
     .nav-links {
       display: flex;
@@ -286,6 +327,39 @@
     .exp-role { font-weight: 700; font-size: 0.98rem; color: var(--text); }
     .exp-date { font-size: 0.84rem; color: var(--accent); font-weight: 600; }
     .exp-place { font-size: 0.88rem; color: var(--muted); margin-bottom: 6px; }
+
+    .exp-toggle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 4px 0 12px;
+      padding: 13px 16px;
+      min-height: 48px;
+      background: rgba(212, 155, 84, 0.1);
+      border: 1px dashed rgba(212, 155, 84, 0.5);
+      border-radius: 12px;
+      color: var(--accent);
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .exp-toggle:hover { background: rgba(212, 155, 84, 0.18); }
+
+    .exp-toggle-icon { transition: transform 0.25s ease; }
+    .exp-toggle[aria-expanded="true"] .exp-toggle-icon { transform: rotate(180deg); }
+
+    .exp-more { display: none; }
+    .exp-more.open { display: block; animation: expFade 0.3s ease; }
+
+    @keyframes expFade {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: none; }
+    }
 
     .skills-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 
@@ -574,7 +648,7 @@
 
   <header>
     <div class="container nav">
-      <a href="#top" class="brand">Chef Anisur Rahman Ariyan</a>
+      <a href="#top" class="brand"><svg class="brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true"><rect width='64' height='64' rx='14' fill='#0f0d0c'/><circle cx='32' cy='32' r='28' fill='none' stroke='#d49b54' stroke-width='2.5'/><ellipse cx='16' cy='24' rx='3' ry='5' transform='rotate(-50 16 24)' fill='#d49b54' stroke='#0f0d0c' stroke-width='1'/><ellipse cx='48' cy='24' rx='3' ry='5' transform='rotate(50 48 24)' fill='#d49b54' stroke='#0f0d0c' stroke-width='1'/><ellipse cx='23' cy='19' rx='4.5' ry='6.5' transform='rotate(-28 23 19)' fill='#d49b54' stroke='#0f0d0c' stroke-width='1'/><ellipse cx='41' cy='19' rx='4.5' ry='6.5' transform='rotate(28 41 19)' fill='#d49b54' stroke='#0f0d0c' stroke-width='1'/><ellipse cx='32' cy='17' rx='6' ry='7.5' fill='#d49b54' stroke='#0f0d0c' stroke-width='1'/><text x='32' y='49' text-anchor='middle' font-family='Georgia,serif' font-size='19' font-weight='700' fill='#d49b54'>AR</text></svg><span>Chef Anisur Rahman Ariyan</span></a>
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -593,12 +667,12 @@
     <!-- Hero -->
     <div class="hero">
       <div>
-        <span class="badge">Pastry & Bakery Chef • Jeddah, Saudi Arabia</span>
+        <span class="badge">Head Chef • Pastry & Bakery • Jeddah, Saudi Arabia</span>
         <h1>Chef Anisur Rahman Ariyan</h1>
         <div class="aka">Also known as <strong>Chef Ariyan Ahmed</strong></div>
         <div class="subtitle">Viennoiserie, Artisan Breads, Silicone Mould, Modern Desserts & Oriental Bakery Breakfast</div>
         <p class="summary">
-          Pastry & Bakery Chef with 10+ years of experience in pastry, bakery, viennoiserie, artisan breads, breakfast & oriental bakery items, desserts, and cake decoration. Currently working at Dessert Rebels Indigo Beach Resort, Jeddah, Saudi Arabia. Skilled in production management, recipe development, food safety, team supervision, and quality control.
+          Pastry & Bakery Chef with 10+ years of experience in pastry, bakery, viennoiserie, artisan breads, breakfast & oriental bakery items, desserts, and cake decoration. Currently Head Chef at Dessert Rebels Indigo Beach Resort, Jeddah, Saudi Arabia. Skilled in production management, recipe development, food safety, team supervision, and quality control.
         </p>
 
         <div class="works-check-box">
@@ -618,13 +692,51 @@
 
       <div class="hero-card">
         <img src="profile.jpg" alt="Chef Anisur Rahman Ariyan (Ariyan Ahmed)" />
-        <div class="meta-line"><strong>Anisur Rahman Ariyan</strong> (Ariyan Ahmed) • Pastry & Bakery Chef</div>
+        <div class="meta-line"><strong>Anisur Rahman Ariyan</strong> (Ariyan Ahmed) • Head Chef, Pastry & Bakery</div>
         <div class="meta-line">Jeddah, 21441, Saudi Arabia • +966580369396</div>
       </div>
     </div>
 
-    <!-- Summary, Experience & Skills -->
+    <!-- About Me -->
     <section id="about">
+      <div class="section-header">
+        <h2>About Me</h2>
+      </div>
+
+      <p class="about-story">
+        Pastry is where precision meets creativity. From laminating the perfect croissant to building a modern entremet, I love turning simple ingredients into something people remember. Since 2017, across Bangladesh and Saudi Arabia, I have led production, trained young chefs and created menus for hotels, resorts and bakeries.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact">
+          <div class="fact-label">Nationality</div>
+          <div class="fact-val">Bangladeshi</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Based in</div>
+          <div class="fact-val">Jeddah, Saudi Arabia</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Current Role</div>
+          <div class="fact-val">Head Chef, Dessert Rebels Indigo Beach Resort</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">In the Industry</div>
+          <div class="fact-val">Since 2017</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Languages</div>
+          <div class="fact-val">Bengali, English, Arabic, Hindi, Urdu</div>
+        </div>
+        <div class="fact highlight">
+          <div class="fact-label">Open to</div>
+          <div class="fact-val">New career opportunities &amp; consultation projects</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary, Experience & Skills -->
+    <section id="experience">
       <div class="section-header">
         <h2>Professional Summary & Experience</h2>
         <p>10+ years of hands-on bakery, pastry, and breakfast/oriental production, recipe innovation, staff training, HACCP compliance, and food cost control across Saudi Arabia and Bangladesh.</p>
@@ -632,13 +744,19 @@
 
       <div class="exp-item">
         <div class="exp-top">
-          <span class="exp-role">Pastry Chef — Dessert Rebels Indigo Beach Resort</span>
+          <span class="exp-role">Head Chef — Dessert Rebels Indigo Beach Resort</span>
           <span class="exp-date">May 2026 – Present</span>
         </div>
         <div class="exp-place">Jeddah, Saudi Arabia</div>
-        <p class="meta-line">Manage overall pastry and bakery operations, modern desserts, viennoiserie, croissants, Danish pastries, breakfast & bakery items, seasonal recipe development, team training, inventory/food cost control, and HACCP quality standards.</p>
+        <p class="meta-line">Lead the full kitchen team and overall pastry and bakery operations, modern desserts, viennoiserie, croissants, Danish pastries, breakfast & bakery items, seasonal recipe development, team training, inventory/food cost control, and HACCP quality standards.</p>
       </div>
 
+      <button type="button" class="exp-toggle" id="expToggle" aria-expanded="false" aria-controls="expMore">
+        <span class="exp-toggle-text">View Full Experience &amp; Skills (6 more roles)</span>
+        <span class="exp-toggle-icon">▾</span>
+      </button>
+
+      <div class="exp-more" id="expMore">
       <div class="exp-item">
         <div class="exp-top">
           <span class="exp-role">Senior CDP Pastry & Bakery — Dessert Rebels Indigo Beach Resort</span>
@@ -702,6 +820,7 @@
         <span class="skill-pill">Inventory & Food Cost Control</span>
         <span class="skill-pill">HACCP & Food Safety</span>
         <span class="skill-pill">Team Supervision & Staff Training</span>
+      </div>
       </div>
     </section>
 
@@ -935,6 +1054,7 @@
           <span class="c-arrow">↗</span>
         </a>
 
+        <!-- Email -->
         <a href="mailto:anisurahmed1999@gmail.com" class="contact-item">
           <span class="c-icon c-email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -991,6 +1111,19 @@
           links.classList.remove('open');
           toggle.setAttribute('aria-expanded', 'false');
         });
+      });
+    })();
+
+    /* ---------- Experience show / hide ---------- */
+    (function () {
+      var btn = document.getElementById('expToggle');
+      var more = document.getElementById('expMore');
+      var txt = btn.querySelector('.exp-toggle-text');
+      btn.addEventListener('click', function () {
+        var open = more.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        txt.textContent = open ? 'Show Less' : 'View Full Experience & Skills (6 more roles)';
+        if (!open) document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
       });
     })();
 
