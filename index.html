@@ -1,53 +1,757 @@
-Update my digital chef portfolio website (index.html) in the GitHub repository anisurahmed1999-gif/chef-ariyan-portfolio for Chef Anisur Rahman Ariyan (Pastry & Bakery Chef based in Jeddah, Saudi Arabia). Do not miss any section, link, or file name below, and keep the layout clean, modern, responsive, and mobile-friendly:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chef Anisur Rahman Ariyan | Pastry & Bakery Chef Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0d0c;
+      --surface: #181412;
+      --surface-2: #221c19;
+      --text: #f7f3ee;
+      --muted: #c2b6aa;
+      --accent: #d49b54;
+      --accent-hover: #e5ae69;
+      --border: rgba(255, 255, 255, 0.1);
+    }
 
-1. Exact Repository File Names to Connect:
-- Profile image: profile.jpg
-- Main Portfolio PDF (42 pages): My_Work_Photo_Portfolio_1-42_25MB.pdf
-- Certificate 1 file: Course-Certificate-1.pdf
-- Certificate 2 file: Course-Certificate-2.pdf
-- Certificate 3 file: Course-Certificate-3.pdf
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-2. Header & Hero Section:
-- Name: Anisur Rahman Ariyan
-- Title/Role: Pastry & Bakery Chef | Viennoiserie, Artisan Breads, Silicone Mould & Modern Pastry Creations
-- Location & Status: Jeddah, 21441, Saudi Arabia • Transferable Iqama
-- Profile photo: profile.jpg
-- Action buttons: Preview 42-Page Portfolio PDF, Download PDF (My_Work_Photo_Portfolio_1-42_25MB.pdf), Book 2–7 Day Consultation, and WhatsApp Direct Chat.
+    html {
+      scroll-behavior: smooth;
+    }
 
-3. Professional Summary, Work Experience & Skills:
-- Summary: Pastry & Bakery Chef with 10+ years of experience in pastry, bakery, viennoiserie, artisan breads, desserts, and cake decoration. Currently working at Dessert Rebels Indigo Beach Resort, Jeddah, Saudi Arabia (May 2026 - Present). Skilled in production management, recipe development, food safety, team supervision, and quality control, along with HACCP, inventory/food cost control, menu development, and staff training.
-- Work Experience:
-  * Pastry Chef — Dessert Rebels Indigo Beach Resort, Jeddah, Saudi Arabia (May 2026 - Present): Manage overall pastry and bakery operations, modern desserts, viennoiserie, croissants, Danish pastries, bakery items, new recipes/seasonal products, team supervision & training, inventory/food cost/purchasing/wastage control, and HACCP food safety compliance.
-  * Senior CDP Pastry & Bakery — Dessert Rebels Indigo Beach Resort, Jeddah, Saudi Arabia (May 2025 - May 2026): Led daily pastry and bakery production, croissants, Danish pastries, viennoiserie, artisan breads, modern pastry items, entremets, mousses, tarts, fillings, junior chef supervision, and cost/wastage control.
-  * Pastry Bakery CDP — Mia's Kitchen, Riyadh, Saudi Arabia (Oct 2024 - Jun 2025): Managed daily pastry and bakery production, laminated dough, viennoiserie, croissants, artisan breads, mousses, creams, fillings, tarts, proofing/baking consistency, recipe development, and junior staff training/supervision.
-  * Pastry Bakery DCDP — Bk Boutique, Riyadh, Saudi Arabia (Oct 2022 - Oct 2024): Produced French pastries, viennoiserie, croissants, Danish pastries, doughs, fillings, creams, mousses, individual desserts, tarts, production planning, FIFO inventory, and new bakery/pastry product development.
-  * Bakery Commis III — Anwar Al Madinah Movenpick Hotel, Madinah, Saudi Arabia: Assisted in dough preparation and mixing, daily bakery production, mise en place, workstation cleanliness/organization, and food safety standards.
-  * Pastry Bakery Commis — Oro Bakery, Dhaka, Bangladesh (May 2018 - Jan 2022): Assisted in pastries, croissants, Danish pastries, bakery items, dough mixing, proofing, baking, finishing, FIFO ingredient storage, and daily production targets.
-  * Trainer — Swiss Bakery, Dhaka, Bangladesh (Mar 2017 - Mar 2018): Trained junior staff and trainees in bakery and pastry production, croissant/Danish/bread doughs, shaping, proofing, oven temperature control, and hygiene/safety standards.
-- Skills: Silicone Mould & Modern Desserts, Modern Entremets & Individual Desserts, Viennoiserie & Laminated Dough Production, Artisan Bread & Bakery Production, Recipe Development & Product Innovation, Inventory Management & Cost Control, HACCP & Food Safety Compliance, Team Supervision & Staff Training, Menu Development & Seasonal Product Creation.
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
 
-4. Signature Items (Silicone Molds & Bakery Items):
-- Dedicated showcase section highlighting:
-  * Silicone Moulds & Modern Desserts: Character & sculpted silicone mould desserts, modern entremets, mousses, glazing, individual desserts, and custom seasonal/showcase creations.
-  * Bakery & Viennoiserie Items: Classic & Bi-Color Croissants, Pain au Chocolat, sculpted viennoiserie, Danishes, sourdough, baguettes, brioche, artisan breads, and menu launches.
+    h1, h2, h3, .brand {
+      font-family: 'Playfair Display', serif;
+    }
 
-5. Restaurant & Bakery Consultation System (2 to 7 Days):
-- Dedicated "Restaurant & Bakery Consultation (2 to 7 Days)" section for restaurants, cafes, and bakeries that want new items developed, recipes tested, menu concepts created, and kitchen teams trained on-site.
-- Interactive duration selector for 2 Days, 3 Days, 4 Days, 5 Days, 6 Days, and 7 Days.
-- Selecting any number of days (2–7) updates the consultation summary and dynamically prepares the WhatsApp inquiry link (https://wa.me/966580369396) with a pre-filled message including the selected number of days.
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-6. Certificates Section ("Certificates"):
-- Display all 3 certificates with View and Download buttons linked to the exact files in the repo:
-  * Certificate 1 (36 Hours): Bakery, Pastry & Patisserie — ICI International Culinary Institute (25 April – 30 April 2025) -> Course-Certificate-1.pdf
-  * Certificate 2 (18 Hours, ID: ICICC0310): Cake Course — ICI International Culinary Institute (15 April 2026) -> Course-Certificate-2.pdf
-  * Certificate 3 (18 Hours, ID: ICISD0355): Dessert Course — ICI International Culinary Institute (1 June 2026) -> Course-Certificate-3.pdf
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-7. Portfolio PDF Preview & Download:
-- Embed/preview My_Work_Photo_Portfolio_1-42_25MB.pdf (42 pages) on the page plus buttons to open in a new tab and download directly.
+    /* Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(15, 13, 12, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
 
-8. Social Media & Direct Contact Links (Exact URLs & Details):
-- WhatsApp Direct Chat: https://wa.me/966580369396
-- Phone: tel:+966580369396 (+966580369396)
-- Email: mailto:anisurahmed1999@gmail.com (anisurahmed1999@gmail.com)
-- Instagram: https://www.instagram.com/anisur_rahman_ariyan.02?jplx=eWZkdWtic3UwemQ5&utm_source=qr
-- LinkedIn: https://www.linkedin.com/in/anisur-rahman-ariyan-43a2b9346?utm_source=share_via&utm_content=profile&utm_medium=member_ios
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 56px 0 44px;
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(212, 155, 84, 0.14);
+      color: var(--accent);
+      border: 1px solid rgba(212, 155, 84, 0.35);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .hero .subtitle {
+      font-size: 1.08rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hero p.summary {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin-bottom: 24px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #14100d;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-whatsapp {
+      background: rgba(37, 211, 102, 0.15);
+      border-color: rgba(37, 211, 102, 0.45);
+      color: #7ef2a8;
+    }
+
+    .btn-whatsapp:hover {
+      background: rgba(37, 211, 102, 0.25);
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .hero-card img {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .meta-line {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    /* Sections */
+    section {
+      padding: 52px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-header {
+      margin-bottom: 28px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 8px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    /* Grid & Cards */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .card ul {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+
+    .card li {
+      margin-bottom: 6px;
+    }
+
+    /* Experience Timeline */
+    .exp-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 14px;
+    }
+
+    .exp-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .exp-role {
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--text);
+    }
+
+    .exp-date {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .exp-place {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    /* Skills Pills */
+    .skills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .skill-pill {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      color: var(--text);
+    }
+
+    /* Consultation */
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      margin: 18px 0 22px;
+    }
+
+    .day-btn {
+      padding: 12px 8px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--text);
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .day-btn.active, .day-btn:hover {
+      background: var(--accent);
+      color: #14100d;
+      border-color: var(--accent);
+    }
+
+    /* Certificates */
+    .cert-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .cert-tag {
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    /* PDF Box */
+    .pdf-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .pdf-frame-wrap {
+      margin-top: 18px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #120f0d;
+    }
+
+    .pdf-frame-wrap iframe {
+      width: 100%;
+      height: 520px;
+      border: none;
+      display: block;
+    }
+
+    /* Contact Links */
+    .contact-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .contact-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      display: block;
+      transition: 0.2s ease;
+    }
+
+    .contact-item:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .contact-val {
+      font-weight: 600;
+      font-size: 0.95rem;
+      word-break: break-word;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .days-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand">Chef Anisur Rahman Ariyan</a>
+      <nav class="nav-links">
+        <a href="#about">Summary & Experience</a>
+        <a href="#signature">Signature Items</a>
+        <a href="#consultation">Consultation (2–7 Days)</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#portfolio-pdf">Portfolio PDF</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- Hero -->
+    <div class="hero">
+      <div>
+        <span class="badge">Pastry & Bakery Chef • Jeddah, Saudi Arabia • Transferable Iqama</span>
+        <h1>Chef Anisur Rahman Ariyan</h1>
+        <div class="subtitle">Viennoiserie, Artisan Breads, Silicone Mould & Modern Pastry Creations</div>
+        <p class="summary">
+          Pastry & Bakery Chef with 10+ years of experience in pastry, bakery, viennoiserie, artisan breads, desserts, and cake decoration. Currently working at Dessert Rebels Indigo Beach Resort, Jeddah, Saudi Arabia. Skilled in production management, recipe development, food safety, team supervision, and quality control.
+        </p>
+        <div class="btn-group">
+          <a href="#portfolio-pdf" class="btn btn-primary">Preview 42-Page Portfolio PDF</a>
+          <a href="My_Work_Photo_Portfolio_1-42_25MB.pdf" download class="btn btn-outline">Download PDF (23.6 MB)</a>
+          <a href="#consultation" class="btn btn-outline">Book 2–7 Day Consultation</a>
+          <a href="https://wa.me/966580369396" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp Direct Chat</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="profile.jpg" alt="Chef Anisur Rahman Ariyan" />
+        <div class="meta-line"><strong>Anisur Rahman Ariyan</strong> • Pastry Chef</div>
+        <div class="meta-line">Jeddah, 21441, Saudi Arabia • +966580369396</div>
+      </div>
+    </div>
+
+    <!-- Summary, Experience & Skills -->
+    <section id="about">
+      <div class="section-header">
+        <h2>Professional Summary & Experience</h2>
+        <p>10+ years of hands-on bakery and pastry production, recipe innovation, staff training, HACCP compliance, and food cost control across Saudi Arabia and Bangladesh.</p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <span class="exp-role">Pastry Chef — Dessert Rebels Indigo Beach Resort</span>
+          <span class="exp-date">May 2026 – Present</span>
+        </div>
+        <div class="exp-place">Jeddah, Saudi Arabia</div>
+        <p class="meta-line">Manage overall pastry and bakery operations, modern desserts, viennoiserie, croissants, Danish pastries, seasonal recipe development, team training, inventory/food cost control, and HACCP quality standards.</p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <span class="exp-role">Senior CDP Pastry & Bakery — Dessert Rebels Indigo Beach Resort</span>
+          <span class="exp-date">May 2025 – May 2026</span>
+        </div>
+        <div class="exp-place">Jeddah, Saudi Arabia</div>
+        <p class="meta-line">Led daily pastry and bakery production, croissants, Danish pastries, artisan breads, entremets, mousses, tarts, junior chef supervision, and cost/wastage control.</p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <span class="exp-role">Pastry Bakery CDP — Mia's Kitchen</span>
+          <span class="exp-date">Oct 2024 – Jun 2025</span>
+        </div>
+        <div class="exp-place">Riyadh, Saudi Arabia</div>
+        <p class="meta-line">Managed daily laminated dough, viennoiserie, croissants, mousses, creams, tarts, proofing/baking consistency, recipe development, and junior staff supervision.</p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <span class="exp-role">Pastry Bakery DCDP — Bk Boutique</span>
+          <span class="exp-date">Oct 2022 – Oct 2024</span>
+        </div>
+        <div class="exp-place">Riyadh, Saudi Arabia</div>
+        <p class="meta-line">Produced French pastries, viennoiserie, croissants, Danish pastries, individual desserts, tarts, production planning, FIFO inventory, and new product creation.</p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <span class="exp-role">Bakery Commis III — Anwar Al Madinah Movenpick Hotel</span>
+          <span class="exp-date">Saudi Arabia</span>
+        </div>
+        <div class="exp-place">Madinah, Saudi Arabia</div>
+        <p class="meta-line">Supported dough preparation, mise en place, daily bakery production, workstation organization, and food safety standards.</p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <span class="exp-role">Pastry Bakery Commis — Oro Bakery</span>
+          <span class="exp-date">May 2018 – Jan 2022</span>
+        </div>
+        <div class="exp-place">Dhaka, Bangladesh</div>
+        <p class="meta-line">Assisted in pastries, croissants, Danish pastries, bakery items, dough mixing, proofing, baking, finishing, and FIFO ingredient storage.</p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <span class="exp-role">Trainer — Swiss Bakery</span>
+          <span class="exp-date">Mar 2017 – Mar 2018</span>
+        </div>
+        <div class="exp-place">Dhaka, Bangladesh</div>
+        <p class="meta-line">Trained trainees and junior staff in croissant, Danish, bread dough, shaping, proofing, oven temperature control, and kitchen hygiene.</p>
+      </div>
+
+      <div class="skills-wrap">
+        <span class="skill-pill">Silicone Mould & Modern Desserts</span>
+        <span class="skill-pill">Viennoiserie & Laminated Dough</span>
+        <span class="skill-pill">Artisan Bread & Bakery Production</span>
+        <span class="skill-pill">Recipe Development & Innovation</span>
+        <span class="skill-pill">Inventory & Food Cost Control</span>
+        <span class="skill-pill">HACCP & Food Safety</span>
+        <span class="skill-pill">Team Supervision & Staff Training</span>
+        <span class="skill-pill">Menu Development</span>
+      </div>
+    </section>
+
+    <!-- Signature Items -->
+    <section id="signature">
+      <div class="section-header">
+        <h2>Signature Items</h2>
+        <p>Highlights of silicone mould creations, modern desserts, laminated viennoiserie, and artisan bakery items.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Silicone Moulds & Modern Desserts</h3>
+          <p>Precision-crafted moulded creations, sculpted/character desserts, and modern pastry presentations.</p>
+          <ul>
+            <li>Character & sculpted silicone mould desserts</li>
+            <li>Modern entremets, mousses & glazing</li>
+            <li>Individual desserts & luxury pastry creations</li>
+            <li>Custom seasonal & showcase dessert concepts</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Bakery & Viennoiserie Items</h3>
+          <p>Crisp, honeycomb-crumb laminated pastries and rustic artisan breads crafted for daily consistency.</p>
+          <ul>
+            <li>Classic & Bi-Color Croissants (multi-color & patterned lamination)</li>
+            <li>Pain au Chocolat, sculpted viennoiserie & fruit/cream Danishes</li>
+            <li>Sourdough loaves, baguettes, brioche & artisan breads</li>
+            <li>Menu launches & batch production scaling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Restaurant & Bakery Consultation System -->
+    <section id="consultation">
+      <div class="section-header">
+        <h2>Restaurant & Bakery Consultation (2 to 7 Days)</h2>
+        <p>Short-term hands-on consultation for restaurants, cafes, and bakeries to launch new items, develop recipes, set up production workflows, and train kitchen staff.</p>
+      </div>
+
+      <div class="card">
+        <h3>Select Consultation Duration</h3>
+        <p>Choose a 2, 3, 4, 5, 6, or 7-day consultation plan tailored to creating new signature items and training your team.</p>
+
+        <div class="days-grid" id="daysGrid">
+          <button type="button" class="day-btn" data-days="2">2 Days</button>
+          <button type="button" class="day-btn active" data-days="3">3 Days</button>
+          <button type="button" class="day-btn" data-days="4">4 Days</button>
+          <button type="button" class="day-btn" data-days="5">5 Days</button>
+          <button type="button" class="day-btn" data-days="6">6 Days</button>
+          <button type="button" class="day-btn" data-days="7">7 Days</button>
+        </div>
+
+        <p id="consultationSummary" style="margin-bottom: 16px; color: var(--text);">
+          Selected: <strong>3-Day Consultation</strong> — Ideal for introducing new menu/signature items, testing recipes, and hands-on team demo.
+        </p>
+
+        <a id="consultationWaBtn" href="https://wa.me/966580369396?text=Hello%20Chef%20Ariyan%2C%20I%20would%20like%20to%20inquire%20about%20a%203-Day%20restaurant/bakery%20consultation%20for%20new%20items%20and%20menu%20development." target="_blank" rel="noopener" class="btn btn-whatsapp">
+          Inquire on WhatsApp for Selected Days
+        </a>
+      </div>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certificates">
+      <div class="section-header">
+        <h2>Certificates</h2>
+        <p>Culinary training certificates from ICI — International Culinary Institute.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card cert-card">
+          <div>
+            <div class="cert-tag">Certificate 1 • 36 Hours</div>
+            <h3>Bakery, Pastry & Patisserie</h3>
+            <p>ICI International Culinary Institute</p>
+            <p class="meta-line">Date: 25 April – 30 April 2025</p>
+          </div>
+          <div class="btn-group" style="margin-bottom: 0;">
+            <a href="Course-Certificate-1.pdf" target="_blank" rel="noopener" class="btn btn-primary">View Certificate (1)</a>
+            <a href="Course-Certificate-1.pdf" download class="btn btn-outline">Download</a>
+          </div>
+        </div>
+
+        <div class="card cert-card">
+          <div>
+            <div class="cert-tag">Certificate 2 • 18 Hours • ID: ICICC0310</div>
+            <h3>Cake Course</h3>
+            <p>ICI International Culinary Institute</p>
+            <p class="meta-line">Issued: 15 April 2026</p>
+          </div>
+          <div class="btn-group" style="margin-bottom: 0;">
+            <a href="Course-Certificate-2.pdf" target="_blank" rel="noopener" class="btn btn-primary">View Certificate (2)</a>
+            <a href="Course-Certificate-2.pdf" download class="btn btn-outline">Download</a>
+          </div>
+        </div>
+
+        <div class="card cert-card">
+          <div>
+            <div class="cert-tag">Certificate 3 • 18 Hours • ID: ICISD0355</div>
+            <h3>Dessert Course</h3>
+            <p>ICI International Culinary Institute</p>
+            <p class="meta-line">Issued: 1 June 2026</p>
+          </div>
+          <div class="btn-group" style="margin-bottom: 0;">
+            <a href="Course-Certificate-3.pdf" target="_blank" rel="noopener" class="btn btn-primary">View Certificate (3)</a>
+            <a href="Course-Certificate-3.pdf" download class="btn btn-outline">Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio PDF Preview & Download -->
+    <section id="portfolio-pdf">
+      <div class="section-header">
+        <h2>Work Photo Portfolio PDF (42 Pages)</h2>
+        <p>Preview directly below or download <strong>My_Work_Photo_Portfolio_1-42_25MB.pdf</strong> (~23.6 MB).</p>
+      </div>
+
+      <div class="pdf-box">
+        <div class="btn-group" style="margin-bottom: 0;">
+          <a href="My_Work_Photo_Portfolio_1-42_25MB.pdf" target="_blank" rel="noopener" class="btn btn-primary">Open PDF in New Tab</a>
+          <a href="My_Work_Photo_Portfolio_1-42_25MB.pdf" download class="btn btn-outline">Download Full PDF (42 Pages)</a>
+        </div>
+
+        <div class="pdf-frame-wrap">
+          <iframe src="My_Work_Photo_Portfolio_1-42_25MB.pdf" title="Chef Anisur Rahman Ariyan Portfolio PDF"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Social Links -->
+    <section id="contact">
+      <div class="section-header">
+        <h2>Contact & Social Links</h2>
+        <p>Reach out directly via WhatsApp, phone, email, Instagram, or LinkedIn.</p>
+      </div>
+
+      <div class="contact-list">
+        <a href="https://wa.me/966580369396" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-label">WhatsApp Direct Chat</div>
+          <div class="contact-val">+966580369396</div>
+        </a>
+
+        <a href="tel:+966580369396" class="contact-item">
+          <div class="contact-label">Phone</div>
+          <div class="contact-val">+966580369396</div>
+        </a>
+
+        <a href="mailto:anisurahmed1999@gmail.com" class="contact-item">
+          <div class="contact-label">Email</div>
+          <div class="contact-val">anisurahmed1999@gmail.com</div>
+        </a>
+
+        <a href="https://www.instagram.com/anisur_rahman_ariyan.02?jplx=eWZkdWtic3UwemQ5&utm_source=qr" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-label">Instagram</div>
+          <div class="contact-val">@anisur_rahman_ariyan.02</div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/anisur-rahman-ariyan-43a2b9346?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-val">Anisur Rahman Ariyan</div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Chef Anisur Rahman Ariyan • Pastry & Bakery Chef Portfolio • Jeddah, Saudi Arabia
+    </div>
+  </footer>
+
+  <script>
+    const dayButtons = document.querySelectorAll('.day-btn');
+    const summaryEl = document.getElementById('consultationSummary');
+    const waBtn = document.getElementById('consultationWaBtn');
+
+    dayButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        dayButtons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const days = btn.getAttribute('data-days');
+        summaryEl.innerHTML = `Selected: <strong>${days}-Day Consultation</strong> — Tailored menu/item creation, recipe development, and hands-on team training.`;
+
+        const msg = encodeURIComponent(
+          `Hello Chef Anisur Rahman Ariyan, I would like to book a ${days}-Day restaurant/bakery consultation for new items, recipe development, and menu setup.`
+        );
+        waBtn.href = `https://wa.me/966580369396?text=${msg}`;
+      });
+    });
+  </script>
+</body>
+</html>
