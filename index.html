@@ -419,6 +419,50 @@
       margin-bottom: 4px;
     }
 
+    /* Portfolio tabs */
+    .pf-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .pf-tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 12px;
+      min-height: 56px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--muted);
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .pf-tab:hover { border-color: rgba(212, 155, 84, 0.5); color: var(--text); }
+
+    .pf-tab.active {
+      background: rgba(212, 155, 84, 0.14);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .pf-tab-icon { font-size: 1.3rem; line-height: 1; }
+
+    .pf-panel { display: none; }
+    .pf-panel.active { display: block; animation: expFade 0.3s ease; }
+
+    .pf-head { margin-bottom: 14px; }
+    .pf-head h3 { font-size: 1.3rem; color: var(--accent); margin-bottom: 4px; }
+    .pf-head p { color: var(--muted); font-size: 0.92rem; }
+
     /* PDF Box */
     .pdf-box {
       background: var(--surface);
@@ -621,6 +665,8 @@
       .hero { grid-template-columns: 1fr; gap: 24px; padding: 28px 0 24px; }
       .hero-card img { max-height: 300px; }
       .grid-3 { grid-template-columns: 1fr; }
+      .pf-tabs { grid-template-columns: 1fr; gap: 8px; }
+      .pf-tab { justify-content: flex-start; min-height: 50px; }
     }
 
     @media (max-width: 600px) {
@@ -676,11 +722,12 @@
         </p>
 
         <div class="works-check-box">
-          <div class="works-check-title">Check My Work Photos (Two PDF Catalogs)</div>
-          <div class="works-check-sub">Both catalogs show my actual work — choose Pastry &amp; Bakery Works or Breakfast &amp; Bakery Works.</div>
+          <div class="works-check-title">Check My Work Photos (Three PDF Catalogs)</div>
+          <div class="works-check-sub">All catalogs show my actual work — choose Bakery, Pastry or Breakfast.</div>
           <div class="btn-group" style="margin-bottom: 0;">
-            <a href="#portfolio-pdf" class="btn btn-primary">Pastry &amp; Bakery Works (42 Pages)</a>
-            <a href="#breakfast-catalog" class="btn btn-outline">Breakfast &amp; Bakery Works</a>
+            <a href="#portfolio" data-open-tab="bakery" class="btn btn-primary">Bakery Works</a>
+            <a href="#portfolio" data-open-tab="pastry" class="btn btn-outline">Pastry Works</a>
+            <a href="#portfolio" data-open-tab="breakfast" class="btn btn-outline">Breakfast Works</a>
           </div>
         </div>
 
@@ -867,49 +914,79 @@
       </div>
     </section>
 
-    <!-- Portfolio: both PDF catalogs -->
+    <!-- Portfolio: three PDF catalogs in tabs -->
     <section id="portfolio">
       <div class="section-header">
         <h2>Work Photo Portfolio</h2>
-        <p>Two photo catalogs of my actual work. On a phone, swipe or use the arrows to change pages, and tap Full Screen for a bigger view.</p>
+        <p>Three photo catalogs of my actual work. Choose a category below. On a phone, swipe or use the arrows to change pages, and tap Full Screen for a bigger view.</p>
       </div>
 
-      <!-- Pastry & Bakery Works PDF -->
-      <div id="portfolio-pdf" class="sub-header first">
-        <h3>Pastry &amp; Bakery Works (42 Pages)</h3>
-        <p>Preview my pastry &amp; bakery work photos below, or download the full PDF (~23.6 MB).</p>
-      </div>
-
-      <div class="pdf-box">
-        <div class="btn-group" style="margin-bottom: 0;">
-          <a href="My_Work_Photo_Portfolio_1-42_25MB.pdf" target="_blank" rel="noopener" class="btn btn-primary">Open Pastry &amp; Bakery Works PDF</a>
-          <a href="My_Work_Photo_Portfolio_1-42_25MB.pdf" download class="btn btn-outline">Download Full PDF (42 Pages)</a>
-        </div>
-
-        <div class="pdf-desktop">
-          <iframe data-src="My_Work_Photo_Portfolio_1-42_25MB.pdf" title="Pastry and Bakery Works Photo Portfolio PDF" loading="lazy"></iframe>
-        </div>
-
-        <div class="pdf-mobile" data-pdf="My_Work_Photo_Portfolio_1-42_25MB.pdf"></div>
-      </div>
-
-      <!-- Breakfast & Bakery Works PDF -->
-      <div id="breakfast-catalog" class="sub-header">
-        <h3>Breakfast &amp; Bakery Works</h3>
-        <p>Preview or download my Breakfast &amp; Bakery Gallery Catalog featuring breakfast &amp; bakery work photos.</p>
+      <div class="pf-tabs" role="tablist">
+        <button type="button" class="pf-tab active" role="tab" id="tab-bakery" data-tab="bakery" aria-selected="true" aria-controls="panel-bakery">
+          <span class="pf-tab-icon">🥐</span>
+          <span class="pf-tab-name">Viennoiserie &amp; Artisan Bakery</span>
+        </button>
+        <button type="button" class="pf-tab" role="tab" id="tab-pastry" data-tab="pastry" aria-selected="false" aria-controls="panel-pastry">
+          <span class="pf-tab-icon">🍰</span>
+          <span class="pf-tab-name">Pastry &amp; Modern Desserts</span>
+        </button>
+        <button type="button" class="pf-tab" role="tab" id="tab-breakfast" data-tab="breakfast" aria-selected="false" aria-controls="panel-breakfast">
+          <span class="pf-tab-icon">🍳</span>
+          <span class="pf-tab-name">Breakfast &amp; Oriental Bakery</span>
+        </button>
       </div>
 
       <div class="pdf-box">
-        <div class="btn-group" style="margin-bottom: 0;">
-          <a href="Breakfast%20%26%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf" target="_blank" rel="noopener" class="btn btn-primary">Open Breakfast &amp; Bakery Works PDF</a>
-          <a href="Breakfast%20%26%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf" download class="btn btn-outline">Download Breakfast Catalog PDF</a>
+        <div class="pf-panel active" id="panel-bakery" role="tabpanel" aria-labelledby="tab-bakery">
+          <div class="pf-head">
+            <h3>Viennoiserie &amp; Artisan Bakery</h3>
+            <p>Croissants, Danish pastries, pain au chocolat, laminated doughs and artisan breads.</p>
+          </div>
+          <div class="btn-group" style="margin-bottom: 0;">
+            <a href="bakery-portfolio.pdf" target="_blank" rel="noopener" class="btn btn-primary">Open PDF</a>
+            <a href="bakery-portfolio.pdf" download class="btn btn-outline">Download Bakery PDF</a>
+          </div>
+
+          <div class="pdf-desktop">
+            <iframe data-src="bakery-portfolio.pdf" title="Viennoiserie &amp; Artisan Bakery PDF" loading="lazy"></iframe>
+          </div>
+
+          <div class="pdf-mobile" data-pdf="bakery-portfolio.pdf"></div>
         </div>
 
-        <div class="pdf-desktop">
-          <iframe data-src="Breakfast%20%26%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf" title="Breakfast and Bakery Works Photo Catalog PDF" loading="lazy"></iframe>
+        <div class="pf-panel" id="panel-pastry" role="tabpanel" aria-labelledby="tab-pastry">
+          <div class="pf-head">
+            <h3>Pastry &amp; Modern Desserts</h3>
+            <p>Entremets, mousses, silicone mould creations, cakes, tarts and individual desserts.</p>
+          </div>
+          <div class="btn-group" style="margin-bottom: 0;">
+            <a href="pastry-portfolio.pdf" target="_blank" rel="noopener" class="btn btn-primary">Open PDF</a>
+            <a href="pastry-portfolio.pdf" download class="btn btn-outline">Download Pastry PDF</a>
+          </div>
+
+          <div class="pdf-desktop">
+            <iframe data-src="pastry-portfolio.pdf" title="Pastry &amp; Modern Desserts PDF" loading="lazy"></iframe>
+          </div>
+
+          <div class="pdf-mobile" data-pdf="pastry-portfolio.pdf"></div>
         </div>
 
-        <div class="pdf-mobile" data-pdf="Breakfast%20%26%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf"></div>
+        <div class="pf-panel" id="panel-breakfast" role="tabpanel" aria-labelledby="tab-breakfast">
+          <div class="pf-head">
+            <h3>Breakfast &amp; Oriental Bakery</h3>
+            <p>Breakfast pastries, oriental bakery items and morning buffet selections for hotels, resorts and cafes.</p>
+          </div>
+          <div class="btn-group" style="margin-bottom: 0;">
+            <a href="Breakfast%20%26%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf" target="_blank" rel="noopener" class="btn btn-primary">Open PDF</a>
+            <a href="Breakfast%20%26%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf" download class="btn btn-outline">Download Breakfast PDF</a>
+          </div>
+
+          <div class="pdf-desktop">
+            <iframe data-src="Breakfast%20%26%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf" title="Breakfast &amp; Oriental Bakery PDF" loading="lazy"></iframe>
+          </div>
+
+          <div class="pdf-mobile" data-pdf="Breakfast%20%26%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf"></div>
+        </div>
       </div>
     </section>
 
@@ -1127,17 +1204,47 @@
       });
     })();
 
+    /* ---------- Portfolio tabs ---------- */
+    (function () {
+      var isMobile = document.documentElement.classList.contains('is-mobile');
+      var tabs = document.querySelectorAll('.pf-tab');
+      var panels = document.querySelectorAll('.pf-panel');
+
+      function openTab(key) {
+        tabs.forEach(function (t) {
+          var on = t.getAttribute('data-tab') === key;
+          t.classList.toggle('active', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        panels.forEach(function (p) {
+          var on = p.id === 'panel-' + key;
+          p.classList.toggle('active', on);
+          if (on && !isMobile) {
+            var f = p.querySelector('iframe[data-src]');
+            if (f && !f.getAttribute('src')) f.setAttribute('src', f.getAttribute('data-src'));
+          }
+        });
+        // let the mobile viewer fit the newly shown catalog
+        if (isMobile) setTimeout(function () { window.dispatchEvent(new Event('resize')); }, 50);
+      }
+
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function () { openTab(t.getAttribute('data-tab')); });
+      });
+
+      document.querySelectorAll('[data-open-tab]').forEach(function (a) {
+        a.addEventListener('click', function () { openTab(a.getAttribute('data-open-tab')); });
+      });
+
+      openTab('bakery');
+    })();
+
     /* ---------- PDF viewers ---------- */
     (function () {
       var isMobile = document.documentElement.classList.contains('is-mobile');
 
-      // Desktop: embedded PDF (loaded only on desktop to save mobile data)
-      if (!isMobile) {
-        document.querySelectorAll('.pdf-desktop iframe[data-src]').forEach(function (f) {
-          f.src = f.getAttribute('data-src');
-        });
-        return;
-      }
+      // Desktop: embedded PDFs are loaded by the portfolio tabs (only the open one)
+      if (!isMobile) return;
 
       // Mobile: page-by-page viewer using PDF.js
       var PDFJS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
