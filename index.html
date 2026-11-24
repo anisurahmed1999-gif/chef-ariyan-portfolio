@@ -34,8 +34,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .gallery-card img { transition: transform 0.5s ease; }
-    .gallery-card:hover img { transform: scale(1.06); }
     @media print {
       body { background: #ffffff !important; color: #111111 !important; }
       .no-print { display: none !important; }
@@ -52,8 +50,8 @@
       <a href="#" class="font-serif text-2xl font-bold tracking-wider text-gold">CHEF ARIYAN</a>
       <nav class="hidden md:flex items-center gap-8 text-sm text-zinc-300">
         <a href="#about" class="hover:text-gold transition">About</a>
+        <a href="#work-photos" class="hover:text-gold transition">My Work Photos</a>
         <a href="#experience" class="hover:text-gold transition">Experience</a>
-        <a href="#portfolio" class="hover:text-gold transition">Portfolio</a>
         <a href="#skills" class="hover:text-gold transition">Skills</a>
         <a href="#contact" class="hover:text-gold transition">Contact</a>
       </nav>
@@ -77,12 +75,12 @@
           Head Chef — Pastry &amp; Bakery
         </h2>
         <p class="text-zinc-400 leading-relaxed text-base max-w-2xl">
-          Accomplished Pastry &amp; Bakery Head Chef with 10 years of international hospitality experience across luxury resorts, five-star hotels, and artisan bakeries. Currently leading pastry, bakery, viennoiserie, and five-star oriental &amp; gourmet breakfast culinary operations at <strong class="text-zinc-200">Dessert Rebels Indigo Beach Resort, Jeddah</strong>. Professionally trained by world-class pastry chefs in modern entremets, laminated doughs, and bespoke dessert artistry.
+          Pastry &amp; Bakery Head Chef with 10 years of experience in pastry, bakery, viennoiserie, artisan breads, desserts, cake decoration, and five-star oriental &amp; gourmet breakfast concepts. Currently working as Head Chef — Pastry &amp; Bakery at <strong class="text-zinc-200">Dessert Rebels Indigo Beach Resort, Jeddah</strong>, professionally trained by world-class pastry chefs in viennoiserie and modern desserts.
         </p>
 
         <div class="flex flex-wrap gap-4 pt-2 no-print">
-          <a href="#portfolio" class="px-6 py-3 bg-gold text-obsidian font-semibold text-sm rounded hover:bg-goldlight transition">
-            Explore Culinary Portfolio
+          <a href="#work-photos" class="px-6 py-3 bg-gold text-obsidian font-semibold text-sm rounded hover:bg-goldlight transition">
+            My Work Photos (PDF)
           </a>
           <a href="https://wa.me/966580369396" target="_blank" class="px-6 py-3 border border-gold/50 text-gold font-semibold text-sm rounded hover:bg-gold/10 transition">
             WhatsApp Direct
@@ -120,221 +118,66 @@
           <img src="profile.jpg" alt="Chef Anisur Rahman Ariyan" class="relative w-full aspect-[3/4] object-cover object-top rounded-2xl border border-gold/40 shadow-2xl" />
           <div class="relative -mt-8 mx-4 p-4 rounded-xl bg-charcoal/95 border border-gold/30 backdrop-blur-md text-center shadow-xl">
             <p class="font-serif text-lg font-bold text-gold">Chef Ariyan Ahmed</p>
-            <p class="text-xs text-zinc-400">Pastry, Bakery &amp; Gourmet Breakfast</p>
+            <p class="text-xs text-zinc-400">Head Chef — Pastry, Bakery &amp; Breakfast</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Gallery Section -->
-  <section id="portfolio" class="py-20 px-5 bg-charcoal/50 border-b border-white/10">
-    <div class="max-w-6xl mx-auto">
+  <!-- My Work Photos (PDF Download & View Section) -->
+  <section id="work-photos" class="py-20 px-5 bg-charcoal/50 border-b border-white/10 no-print">
+    <div class="max-w-5xl mx-auto">
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-gold text-xs uppercase tracking-widest font-semibold">Visual Showcase</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">Signature Creations &amp; Culinary Gallery</h2>
+        <span class="text-gold text-xs uppercase tracking-widest font-semibold">Culinary Portfolio Catalogue</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">My Work Photos</h2>
         <p class="text-zinc-400 text-sm mt-3">
-          A curated selection of five-star gourmet breakfast concepts, viennoiserie, artisan breads, and modern luxury pastry creations.
+          Click below to view or download the complete portfolio PDF containing my pastry, bakery, viennoiserie, modern desserts, and five-star breakfast creations.
         </p>
       </div>
 
-      <!-- Filter Buttons -->
-      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 no-print">
-        <button onclick="filterGallery('all', this)" class="filter-btn active px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full bg-gold text-obsidian transition">
-          All Creations
-        </button>
-        <button onclick="filterGallery('breakfast', this)" class="filter-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full bg-cardbg text-zinc-300 border border-white/10 hover:border-gold transition">
-          Breakfast &amp; Oriental
-        </button>
-        <button onclick="filterGallery('viennoiserie', this)" class="filter-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full bg-cardbg text-zinc-300 border border-white/10 hover:border-gold transition">
-          Viennoiserie &amp; Bakery
-        </button>
-        <button onclick="filterGallery('pastry', this)" class="filter-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full bg-cardbg text-zinc-300 border border-white/10 hover:border-gold transition">
-          Modern &amp; Mould Desserts
-        </button>
-      </div>
-
-      <!-- Gallery Grid -->
-      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Breakfast & Oriental Items (Your 16 Direct Photos) -->
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="breakfast">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0819.jpeg" alt="Smoked Salmon Eggs Benedict Croissant" class="w-full h-full object-cover" loading="lazy" />
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Main Pastry & Bakery Work Photos PDF -->
+        <div class="bg-cardbg p-7 rounded-2xl border border-gold/30 flex flex-col justify-between shadow-lg">
+          <div>
+            <span class="inline-block px-3 py-1 text-[11px] font-semibold bg-gold/15 text-gold rounded-full uppercase tracking-wider mb-3">
+              Pastry &amp; Bakery Catalogue
+            </span>
+            <h3 class="font-serif text-2xl font-bold text-white">My Work Photo is here — Pastry And Bakery</h3>
+            <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+              Includes Bi-Color Croissant, Pain Au Chocolat, Viennoiserie, Sourdough &amp; Artisan Bread, Silicone Mould Desserts, Individual Desserts, Éclairs &amp; Luxury Creations.
+            </p>
           </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Breakfast &amp; Viennoiserie</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Smoked Salmon Benedict Croissant</h3>
-            <p class="text-xs text-zinc-400 mt-1">Flaky butter croissant, poached eggs, smoked salmon &amp; hollandaise.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="My%20Work%20Photo%20is%20here%20Pastry%20And%20Bakery%20.pdf" target="_blank" class="px-5 py-2.5 bg-gold text-obsidian font-semibold text-xs uppercase tracking-wider rounded hover:bg-goldlight transition">
+              View PDF
+            </a>
+            <a href="My%20Work%20Photo%20is%20here%20Pastry%20And%20Bakery%20.pdf" download="My Work Photo is here Pastry And Bakery.pdf" class="px-5 py-2.5 border border-gold/50 text-gold font-semibold text-xs uppercase tracking-wider rounded hover:bg-gold/10 transition">
+              Download PDF
+            </a>
           </div>
         </div>
 
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="breakfast">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0815.jpeg" alt="Avocado & Poached Eggs Sourdough" class="w-full h-full object-cover" loading="lazy" />
+        <!-- Breakfast & Bakery Gallery PDF -->
+        <div class="bg-cardbg p-7 rounded-2xl border border-white/15 flex flex-col justify-between shadow-lg">
+          <div>
+            <span class="inline-block px-3 py-1 text-[11px] font-semibold bg-white/10 text-zinc-200 rounded-full uppercase tracking-wider mb-3">
+              Breakfast &amp; Bakery Edition
+            </span>
+            <h3 class="font-serif text-2xl font-bold text-white">Breakfast &amp; Bakery Gallery Catalog</h3>
+            <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+              Showcases gourmet &amp; five-star breakfast plating, artisanal sourdough &amp; viennoiserie service, fruit platters, bowls, and modern morning creations.
+            </p>
           </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Gourmet Breakfast</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Avocado &amp; Poached Egg Sourdough</h3>
-            <p class="text-xs text-zinc-400 mt-1">Artisan sourdough, smashed avocado, feta crumble &amp; microgreens.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="breakfast">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0822.jpeg" alt="Fresh Fig & Ricotta Tartine" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Oriental &amp; Gourmet</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Fresh Fig &amp; Ricotta Tartine</h3>
-            <p class="text-xs text-zinc-400 mt-1">Whipped cheese, fresh figs, pomegranate &amp; arugula on sourdough.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="breakfast">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0818.jpeg" alt="Brioche French Toast" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Signature Breakfast</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Caramelized Brioche French Toast</h3>
-            <p class="text-xs text-zinc-400 mt-1">Thick-cut brioche topped with vanilla bean cream &amp; berry compote.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="Breakfast%20&amp;%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf" target="_blank" class="px-5 py-2.5 bg-gold text-obsidian font-semibold text-xs uppercase tracking-wider rounded hover:bg-goldlight transition">
+              View Breakfast PDF
+            </a>
+            <a href="Breakfast%20&amp;%20Bakery%20Gallery%20Catalog%20%E2%80%94%20Chef%20Anisur%20Rahman%20Ariyan.pdf" download="Breakfast & Bakery Gallery Catalog - Chef Anisur Rahman Ariyan.pdf" class="px-5 py-2.5 border border-white/25 text-zinc-200 font-semibold text-xs uppercase tracking-wider rounded hover:border-gold hover:text-gold transition">
+              Download PDF
+            </a>
           </div>
         </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="breakfast">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0810.jpeg" alt="Artisan Granola & Berry Yogurt Bowl" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Healthy Breakfast</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Granola &amp; Vanilla Yogurt Bowl</h3>
-            <p class="text-xs text-zinc-400 mt-1">House-roasted nut granola, Greek yogurt, berries &amp; honey drizzle.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="breakfast">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0813.jpeg" alt="Caramelized Date & Banana Oatmeal" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Oriental Breakfast</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Spiced Date &amp; Banana Porridge</h3>
-            <p class="text-xs text-zinc-400 mt-1">Warm cinnamon oats with caramelized Saudi dates &amp; fresh banana.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="breakfast">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0825.jpeg" alt="Rosemary Focaccia Sandwich" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Artisan Bakery</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Rosemary Focaccia Panini</h3>
-            <p class="text-xs text-zinc-400 mt-1">Freshly baked herb focaccia layered with wild rocket &amp; savory filling.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="breakfast">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0812.jpeg" alt="Strawberry Crème Brûlée" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Dessert &amp; Brunch</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Classic Vanilla Crème Brûlée</h3>
-            <p class="text-xs text-zinc-400 mt-1">Caramelized sugar crust over silky custard with fresh strawberries.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="viennoiserie">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0820.jpeg" alt="Pain au Chocolat" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Viennoiserie</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Artisan Pain au Chocolat</h3>
-            <p class="text-xs text-zinc-400 mt-1">27-layer laminated French pastry served with berry compote.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="viennoiserie">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0821.jpeg" alt="Classic Butter Croissant" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Viennoiserie</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Classic French Butter Croissant</h3>
-            <p class="text-xs text-zinc-400 mt-1">Honeycomb interior crumb served with whipped butter &amp; strawberry jam.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="viennoiserie">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0816.jpeg" alt="Sourdough & Brioche Toast Basket" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Artisan Bread</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Sourdough &amp; Brioche Service</h3>
-            <p class="text-xs text-zinc-400 mt-1">Naturally leavened sourdough &amp; brioche with house preserves.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="breakfast">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0814.jpeg" alt="Poached Eggs on Sourdough" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Hot Kitchen &amp; Bakery</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Poached Eggs on Sourdough</h3>
-            <p class="text-xs text-zinc-400 mt-1">Farm-fresh poached eggs with fresh dill on rustic sourdough.</p>
-          </div>
-        </div>
-
-        <!-- Additional Pastry & Viennoiserie Slots (Add your PDF images as pastry-1.jpg to pastry-4.jpg) -->
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="viennoiserie">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900 flex items-center justify-center">
-            <img src="pastry-1.jpg" onerror="this.src='IMG_0824.jpeg'" alt="Bi-Color Croissant" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Laminated Pastry</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Bi-Color Croissant Collection</h3>
-            <p class="text-xs text-zinc-400 mt-1">Precision dual-tone lamination with gourmet fillings.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="pastry">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900 flex items-center justify-center">
-            <img src="pastry-2.jpg" onerror="this.src='IMG_0817.jpeg'" alt="Silicone Mould Desserts" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Modern Entremets</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Silicone Mould &amp; Character Desserts</h3>
-            <p class="text-xs text-zinc-400 mt-1">Sculptural mousse entremets with velvet spray &amp; mirror glaze.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="pastry">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900 flex items-center justify-center">
-            <img src="pastry-3.jpg" onerror="this.src='IMG_0823.jpeg'" alt="Individual Luxury Pastry" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Patisserie</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Individual Desserts &amp; Éclairs</h3>
-            <p class="text-xs text-zinc-400 mt-1">Fine French patisserie crafted with premium Veliche chocolate.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card group bg-cardbg rounded-xl overflow-hidden border border-white/10" data-category="breakfast">
-          <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-            <img src="IMG_0811.jpeg" alt="Five-Star Seasonal Fruit Platter" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-widest text-gold">Five-Star Buffet &amp; Plating</span>
-            <h3 class="font-semibold text-sm text-zinc-100 mt-1">Artisan Fresh Fruit Platter</h3>
-            <p class="text-xs text-zinc-400 mt-1">Precision-cut seasonal melon, citrus, grapes &amp; fresh berries.</p>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -349,7 +192,7 @@
 
       <div class="space-y-8 border-l-2 border-gold/30 pl-6 sm:pl-8 ml-2">
         
-        <!-- Current Role (Updated to Head Chef - Pastry & Bakery) -->
+        <!-- Current Role -->
         <div class="relative bg-cardbg p-6 rounded-xl border border-gold/40 shadow-lg">
           <span class="absolute -left-[35px] sm:-left-[43px] top-6 w-4 h-4 rounded-full bg-gold ring-4 ring-obsidian"></span>
           <div class="flex flex-wrap justify-between items-start gap-2">
@@ -361,10 +204,10 @@
             <span class="text-xs font-semibold px-3 py-1 rounded bg-white/5 text-zinc-300 border border-white/10">MAY 2026 – PRESENT</span>
           </div>
           <ul class="mt-4 space-y-2 text-sm text-zinc-300 list-disc list-inside">
-            <li>Direct overall pastry, bakery, and five-star oriental &amp; gourmet breakfast culinary operations.</li>
-            <li>Lead production of modern entremets, viennoiserie, bi-color croissants, sourdough breads, and luxury desserts.</li>
-            <li>Spearhead menu engineering, seasonal R&amp;D concepts, food cost control, purchasing, and wastage reduction.</li>
-            <li>Supervise, mentor, and train kitchen brigades while enforcing strict HACCP and hygiene compliance.</li>
+            <li>Manage overall pastry, bakery, and five-star oriental &amp; gourmet breakfast operations, ensuring smooth daily production.</li>
+            <li>Lead the production of modern desserts, viennoiserie, croissants, Danish pastries, sourdough breads, and bakery items.</li>
+            <li>Develop new recipes, seasonal products, and menu concepts; monitor inventory, food cost, purchasing, and wastage control.</li>
+            <li>Supervise and train pastry, bakery, and kitchen team members while maintaining HACCP, food safety, and hygiene standards.</li>
           </ul>
         </div>
 
@@ -379,8 +222,8 @@
             <span class="text-xs font-medium px-3 py-1 rounded bg-white/5 text-zinc-400">MAY 2025 – MAY 2026</span>
           </div>
           <ul class="mt-3 space-y-1.5 text-sm text-zinc-400 list-disc list-inside">
-            <li>Led daily production of croissants, Danish pastries, artisan breads, entremets, mousses, and tarts.</li>
-            <li>Supervised junior chefs, monitored inventory/wastage, and upheld HACCP presentation standards.</li>
+            <li>Led daily pastry and bakery production while maintaining quality standards across croissants, Danish, viennoiserie, and artisan breads.</li>
+            <li>Prepared entremets, mousses, tarts, fillings, and premium desserts; supervised junior chefs and controlled food cost &amp; wastage.</li>
           </ul>
         </div>
 
@@ -395,8 +238,8 @@
             <span class="text-xs font-medium px-3 py-1 rounded bg-white/5 text-zinc-400">OCT 2024 – JUN 2025</span>
           </div>
           <ul class="mt-3 space-y-1.5 text-sm text-zinc-400 list-disc list-inside">
-            <li>Managed daily laminated dough production, proofing, baking, and modern dessert finishing.</li>
-            <li>Contributed to recipe innovation, FIFO inventory control, and junior staff training.</li>
+            <li>Managed daily laminated dough, viennoiserie, artisan bread, mousse, cream, and tart production with strict proofing and baking control.</li>
+            <li>Assisted in recipe development, FIFO inventory control, wastage reduction, and junior staff supervision.</li>
           </ul>
         </div>
 
@@ -411,8 +254,8 @@
             <span class="text-xs font-medium px-3 py-1 rounded bg-white/5 text-zinc-400">OCT 2022 – OCT 2024</span>
           </div>
           <ul class="mt-3 space-y-1.5 text-sm text-zinc-400 list-disc list-inside">
-            <li>Produced French pastries, viennoiserie, individual desserts, creams, and fillings to luxury boutique standards.</li>
-            <li>Monitored baking consistency, daily production planning, and food safety compliance.</li>
+            <li>Produced French pastries, viennoiserie, croissants, Danish pastries, individual desserts, tarts, and creams to high presentation standards.</li>
+            <li>Supported daily production planning, FIFO stock practices, HACCP hygiene, and junior team training.</li>
           </ul>
         </div>
 
@@ -427,7 +270,7 @@
             <span class="text-xs font-medium px-3 py-1 rounded bg-white/5 text-zinc-400">5-Star Hotel Operations</span>
           </div>
           <ul class="mt-3 space-y-1.5 text-sm text-zinc-400 list-disc list-inside">
-            <li>Supported high-volume five-star hotel bakery production, dough mixing, mise en place, and hygiene standards.</li>
+            <li>Assisted in dough preparation, mixing, mise en place, safe equipment operation, and strict food hygiene standards.</li>
           </ul>
         </div>
 
@@ -437,13 +280,13 @@
             <span class="text-xs text-gold font-semibold">MAY 2018 – JAN 2022</span>
             <h3 class="text-base font-bold text-white mt-1">Pastry &amp; Bakery Commis</h3>
             <p class="text-xs text-zinc-400">Oro Bakery • Dhaka, Bangladesh</p>
-            <p class="text-xs text-zinc-400 mt-2">Daily production of pastries, croissants, Danish pastries, proofing, baking &amp; FIFO stock control.</p>
+            <p class="text-xs text-zinc-400 mt-2">Assisted in pastries, croissants, Danish pastries, dough mixing, proofing, baking, hygiene &amp; FIFO inventory.</p>
           </div>
           <div class="bg-cardbg/60 p-5 rounded-xl border border-white/10">
             <span class="text-xs text-gold font-semibold">MAR 2017 – MAR 2018</span>
-            <h3 class="text-base font-bold text-white mt-1">Bakery &amp; Pastry Trainer</h3>
+            <h3 class="text-base font-bold text-white mt-1">Trainer</h3>
             <p class="text-xs text-zinc-400">Swiss Bakery • Dhaka, Bangladesh</p>
-            <p class="text-xs text-zinc-400 mt-2">Trained junior bakers in croissant/Danish dough lamination, oven temperature control &amp; hygiene.</p>
+            <p class="text-xs text-zinc-400 mt-2">Trained junior staff and trainees in croissant, Danish, bread dough handling, oven temperature control &amp; hygiene.</p>
           </div>
         </div>
 
@@ -460,14 +303,14 @@
         <span class="text-gold text-xs uppercase tracking-widest font-semibold">Expertise</span>
         <h2 class="font-serif text-3xl font-bold mt-2 mb-6">Core Culinary &amp; Management Skills</h2>
         <div class="flex flex-wrap gap-2.5">
-          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Modern Entremets &amp; Silicone Mould Desserts</span>
-          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Viennoiserie &amp; Bi-Color Lamination</span>
-          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Five-Star Oriental &amp; Gourmet Breakfast</span>
-          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Artisan Sourdough &amp; Bread Production</span>
-          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Menu Engineering &amp; Seasonal R&amp;D</span>
-          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Food Costing, Inventory &amp; Wastage Control</span>
+          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Modern Entremets &amp; Individual Desserts</span>
+          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Viennoiserie &amp; Laminated Dough Production</span>
+          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Artisan Bread &amp; Bakery Production</span>
+          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Recipe Development &amp; Product Innovation</span>
+          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Inventory Management &amp; Cost Control</span>
           <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">HACCP &amp; Food Safety Compliance</span>
-          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Kitchen Brigade Leadership &amp; Training</span>
+          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Team Supervision &amp; Staff Training</span>
+          <span class="px-4 py-2 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200">Menu Development &amp; Seasonal Creation</span>
         </div>
       </div>
 
@@ -475,16 +318,16 @@
       <div class="md:col-span-5 space-y-6">
         <div>
           <span class="text-gold text-xs uppercase tracking-widest font-semibold">Credentials</span>
-          <h2 class="font-serif text-3xl font-bold mt-2 mb-4">Certifications &amp; Education</h2>
+          <h2 class="font-serif text-3xl font-bold mt-2 mb-4">Courses &amp; Education</h2>
         </div>
         <div class="space-y-3">
           <div class="p-4 rounded-xl bg-cardbg border border-white/10">
             <p class="text-xs text-gold font-semibold">ICI — International Culinary Institute</p>
-            <h4 class="text-sm font-bold text-white mt-0.5">Professional Dessert, Cake &amp; Patisserie Courses</h4>
-            <p class="text-xs text-zinc-400 mt-1">Specialized training in modern desserts, cake artistry &amp; bakery patisserie (2025–2026). Mentored by world-class pastry chefs.</p>
+            <h4 class="text-sm font-bold text-white mt-0.5">Dessert Course, Cake Course &amp; Bakery, Pastry, Patisserie</h4>
+            <p class="text-xs text-zinc-400 mt-1">Completed specialized courses (2025–2026) and trained under world-class pastry chefs.</p>
           </div>
           <div class="p-4 rounded-xl bg-cardbg border border-white/10">
-            <p class="text-xs text-gold font-semibold">Singair Degree College, Manikganj • 2017</p>
+            <p class="text-xs text-gold font-semibold">Singair Degree College, Singair Manikganj • 2017</p>
             <h4 class="text-sm font-bold text-white mt-0.5">Certificate of Higher Education</h4>
           </div>
         </div>
@@ -499,11 +342,11 @@
       <span class="text-gold text-xs uppercase tracking-widest font-semibold">Get In Touch</span>
       <h2 class="font-serif text-3xl sm:text-4xl font-bold">Available for Executive Culinary Leadership &amp; Consulting</h2>
       <p class="text-zinc-400 text-sm">
-        Based in Jeddah, Saudi Arabia (Transferable Iqama). Reach out directly via WhatsApp, Email, or LinkedIn.
+        Jeddah, 21441, Saudi Arabia • Transferable Iqama
       </p>
       <div class="flex flex-wrap justify-center gap-4 pt-2">
         <a href="tel:+966580369396" class="px-5 py-3 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200 hover:border-gold transition">
-          📞 +966 58 036 9396
+          📞 +966580369396
         </a>
         <a href="mailto:anisurahmed1999@gmail.com" class="px-5 py-3 rounded-lg bg-cardbg border border-white/10 text-sm text-zinc-200 hover:border-gold transition">
           ✉️ anisurahmed1999@gmail.com
@@ -516,25 +359,5 @@
     </div>
   </footer>
 
-  <!-- Interactive Gallery Filter Script -->
-  <script>
-    function filterGallery(category, btn) {
-      document.querySelectorAll('.filter-btn').forEach(b => {
-        b.classList.remove('bg-gold', 'text-obsidian');
-        b.classList.add('bg-cardbg', 'text-zinc-300');
-      });
-      btn.classList.remove('bg-cardbg', 'text-zinc-300');
-      btn.classList.add('bg-gold', 'text-obsidian');
-
-      const cards = document.querySelectorAll('.gallery-card');
-      cards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-  </script>
 </body>
 </html>
